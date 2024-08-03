@@ -32,6 +32,7 @@ namespace BLL
             KhachHang khachHang = cinema.KhachHangs.Where(kh => kh.MaKhachHang == makh).FirstOrDefault();
 
             // Nếu tìm thấy khách hàng, cập nhật thông tin
+            //daghjdhjadhd
             if (khachHang != null)
             {
                 khachHang.TenKhachHang = tenKhachHang;
