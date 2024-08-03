@@ -38,5 +38,17 @@ namespace Cinema
             TheLoaiPhim phim=new TheLoaiPhim();
             openChildform(phim);
         }
+
+        private void btnLichChieu_Click(object sender, EventArgs e)
+        {
+            LichChieuPhim lichChieuPhim = new LichChieuPhim();
+            openChildform(lichChieuPhim);
+        }
+
+        private void btnPhim_Click(object sender, EventArgs e)
+        {
+            Phim phim = new Phim();
+            openChildform(phim);
+        }
     }
 }

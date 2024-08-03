@@ -37,13 +37,16 @@
             this.label2 = new System.Windows.Forms.Label();
             this.txtMaTL = new System.Windows.Forms.TextBox();
             this.txtTenTL = new System.Windows.Forms.TextBox();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.label3 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(2, 210);
+            this.dataGridView1.Location = new System.Drawing.Point(2, 257);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 62;
             this.dataGridView1.RowTemplate.Height = 28;
@@ -53,7 +56,7 @@
             // 
             // btnThem
             // 
-            this.btnThem.Location = new System.Drawing.Point(64, 139);
+            this.btnThem.Location = new System.Drawing.Point(171, 188);
             this.btnThem.Name = "btnThem";
             this.btnThem.Size = new System.Drawing.Size(100, 35);
             this.btnThem.TabIndex = 1;
@@ -63,7 +66,7 @@
             // 
             // btnSua
             // 
-            this.btnSua.Location = new System.Drawing.Point(170, 138);
+            this.btnSua.Location = new System.Drawing.Point(277, 187);
             this.btnSua.Name = "btnSua";
             this.btnSua.Size = new System.Drawing.Size(100, 35);
             this.btnSua.TabIndex = 2;
@@ -73,7 +76,7 @@
             // 
             // btnXoa
             // 
-            this.btnXoa.Location = new System.Drawing.Point(282, 139);
+            this.btnXoa.Location = new System.Drawing.Point(389, 188);
             this.btnXoa.Name = "btnXoa";
             this.btnXoa.Size = new System.Drawing.Size(100, 35);
             this.btnXoa.TabIndex = 3;
@@ -83,7 +86,7 @@
             // 
             // btnThoat
             // 
-            this.btnThoat.Location = new System.Drawing.Point(388, 139);
+            this.btnThoat.Location = new System.Drawing.Point(495, 188);
             this.btnThoat.Name = "btnThoat";
             this.btnThoat.Size = new System.Drawing.Size(100, 35);
             this.btnThoat.TabIndex = 4;
@@ -94,7 +97,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(87, 28);
+            this.label1.Location = new System.Drawing.Point(176, 100);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(90, 20);
             this.label1.TabIndex = 5;
@@ -103,7 +106,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(91, 65);
+            this.label2.Location = new System.Drawing.Point(176, 139);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(95, 20);
             this.label2.TabIndex = 6;
@@ -111,7 +114,7 @@
             // 
             // txtMaTL
             // 
-            this.txtMaTL.Location = new System.Drawing.Point(205, 28);
+            this.txtMaTL.Location = new System.Drawing.Point(294, 100);
             this.txtMaTL.Name = "txtMaTL";
             this.txtMaTL.ReadOnly = true;
             this.txtMaTL.Size = new System.Drawing.Size(283, 26);
@@ -119,16 +122,38 @@
             // 
             // txtTenTL
             // 
-            this.txtTenTL.Location = new System.Drawing.Point(205, 61);
+            this.txtTenTL.Location = new System.Drawing.Point(294, 133);
             this.txtTenTL.Name = "txtTenTL";
             this.txtTenTL.Size = new System.Drawing.Size(283, 26);
             this.txtTenTL.TabIndex = 8;
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.Black;
+            this.panel1.Controls.Add(this.label3);
+            this.panel1.Location = new System.Drawing.Point(2, -3);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(797, 87);
+            this.panel1.TabIndex = 9;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(206)))), ((int)(((byte)(104)))));
+            this.label3.Location = new System.Drawing.Point(248, 12);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(229, 52);
+            this.label3.TabIndex = 0;
+            this.label3.Text = "THỂ LOẠI";
             // 
             // TheLoaiPhim
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(206)))), ((int)(((byte)(104)))));
+            this.ClientSize = new System.Drawing.Size(800, 502);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.txtTenTL);
             this.Controls.Add(this.txtMaTL);
             this.Controls.Add(this.label2);
@@ -143,6 +168,8 @@
             this.Text = "TheLoaiPhim";
             this.Load += new System.EventHandler(this.TheLoaiPhim_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -159,5 +186,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtMaTL;
         private System.Windows.Forms.TextBox txtTenTL;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label label3;
     }
 }

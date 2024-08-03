@@ -34,8 +34,8 @@
             this.quảnLíNhómNgườiDùngToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.thêmNgườiDùngVàoNhómToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.mànHìnhToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.thoátToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.phânQuyềnToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.thoátToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -92,12 +92,6 @@
             this.mànHìnhToolStripMenuItem.Size = new System.Drawing.Size(102, 29);
             this.mànHìnhToolStripMenuItem.Text = "Màn hình";
             // 
-            // thoátToolStripMenuItem
-            // 
-            this.thoátToolStripMenuItem.Name = "thoátToolStripMenuItem";
-            this.thoátToolStripMenuItem.Size = new System.Drawing.Size(73, 29);
-            this.thoátToolStripMenuItem.Text = "Thoát";
-            // 
             // phânQuyềnToolStripMenuItem
             // 
             this.phânQuyềnToolStripMenuItem.Name = "phânQuyềnToolStripMenuItem";
@@ -105,10 +99,17 @@
             this.phânQuyềnToolStripMenuItem.Text = "Phân Quyền";
             this.phânQuyềnToolStripMenuItem.Click += new System.EventHandler(this.phânQuyềnToolStripMenuItem_Click);
             // 
+            // thoátToolStripMenuItem
+            // 
+            this.thoátToolStripMenuItem.Name = "thoátToolStripMenuItem";
+            this.thoátToolStripMenuItem.Size = new System.Drawing.Size(73, 29);
+            this.thoátToolStripMenuItem.Text = "Thoát";
+            // 
             // QLNhanVien
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(206)))), ((int)(((byte)(104)))));
             this.ClientSize = new System.Drawing.Size(1077, 689);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;

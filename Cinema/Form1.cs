@@ -57,9 +57,10 @@ namespace Cinema
 
         private void btnDangXuat_Click(object sender, EventArgs e)
         {
-            this.Dispose();
-            DangNhap dn=new DangNhap();
-            dn.Show();
+            this.Close();
+            //DangNhap dn=new DangNhap();
+            //dn.Show();
+            
         }
 
         private void btnQLLoaiPhim_Click(object sender, EventArgs e)
@@ -91,6 +92,26 @@ namespace Cinema
         {
             QuanLiRapPhim ph=new QuanLiRapPhim();
             ph.Show();
+        }
+
+        private void Form1_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (MessageBox.Show("Bạn có chắc chắn muốn đóng form?", "Xác nhận", MessageBoxButtons.YesNo) == DialogResult.No)
+            {
+                e.Cancel = true; // Ngăn form đóng
+            }
+           
+        }
+
+        private void btnQLVe_Click(object sender, EventArgs e)
+        {
+            QuanLiRapPhim quanLiRapPhim = new QuanLiRapPhim();
+            quanLiRapPhim.Show();
+        }
+
+        private void btnQLVe_Click_1(object sender, EventArgs e)
+        {
+
         }
     }
 }

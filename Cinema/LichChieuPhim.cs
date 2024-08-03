@@ -138,5 +138,10 @@ namespace Cinema
         {
             this.Close();
         }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            txtSoGheTrong.Text = "";
+        }
     }
 }

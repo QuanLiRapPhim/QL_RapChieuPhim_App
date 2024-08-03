@@ -75,8 +75,10 @@ namespace Cinema
                 Program.frm_mainForm = new Form1();
                 Program.frm_mainForm.TenDangNhap = txtTaiKhoan.Text;
             }
-            this.Visible = false;
+ 
+            
             Program.frm_mainForm.Show();
+            
         }
 
         private void button2_Click(object sender, EventArgs e)

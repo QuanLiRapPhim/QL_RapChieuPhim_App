@@ -40,11 +40,12 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(223, 35);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 28F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(202, 28);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(305, 20);
+            this.label1.Size = new System.Drawing.Size(323, 64);
             this.label1.TabIndex = 0;
-            this.label1.Text = "CHÀO MỪNG ĐẾN TRANG ĐĂNG NHẬP";
+            this.label1.Text = "WELCOME";
             // 
             // button1
             // 
@@ -69,6 +70,7 @@
             // lblTaiKhoan
             // 
             this.lblTaiKhoan.AutoSize = true;
+            this.lblTaiKhoan.ForeColor = System.Drawing.Color.Black;
             this.lblTaiKhoan.Location = new System.Drawing.Point(161, 127);
             this.lblTaiKhoan.Name = "lblTaiKhoan";
             this.lblTaiKhoan.Size = new System.Drawing.Size(80, 20);
@@ -78,6 +80,7 @@
             // lblMatKhau
             // 
             this.lblMatKhau.AutoSize = true;
+            this.lblMatKhau.ForeColor = System.Drawing.Color.Black;
             this.lblMatKhau.Location = new System.Drawing.Point(165, 185);
             this.lblMatKhau.Name = "lblMatKhau";
             this.lblMatKhau.Size = new System.Drawing.Size(77, 20);
@@ -95,6 +98,7 @@
             // 
             this.txtMatKhau.Location = new System.Drawing.Point(311, 185);
             this.txtMatKhau.Name = "txtMatKhau";
+            this.txtMatKhau.PasswordChar = '*';
             this.txtMatKhau.Size = new System.Drawing.Size(235, 26);
             this.txtMatKhau.TabIndex = 6;
             // 
@@ -102,7 +106,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(206)))), ((int)(((byte)(104)))));
+            this.ClientSize = new System.Drawing.Size(754, 423);
             this.Controls.Add(this.txtMatKhau);
             this.Controls.Add(this.txtTaiKhoan);
             this.Controls.Add(this.lblMatKhau);

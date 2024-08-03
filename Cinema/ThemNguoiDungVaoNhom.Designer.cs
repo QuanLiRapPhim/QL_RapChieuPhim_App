@@ -233,27 +233,27 @@
             this.fill_DKToolStripButton});
             this.fill_DKToolStrip.Location = new System.Drawing.Point(0, 0);
             this.fill_DKToolStrip.Name = "fill_DKToolStrip";
-            this.fill_DKToolStrip.Size = new System.Drawing.Size(1042, 34);
+            this.fill_DKToolStrip.Size = new System.Drawing.Size(1042, 38);
             this.fill_DKToolStrip.TabIndex = 2;
             this.fill_DKToolStrip.Text = "fill_DKToolStrip";
             // 
             // maNhomNguoiDungToolStripLabel
             // 
             this.maNhomNguoiDungToolStripLabel.Name = "maNhomNguoiDungToolStripLabel";
-            this.maNhomNguoiDungToolStripLabel.Size = new System.Drawing.Size(184, 29);
+            this.maNhomNguoiDungToolStripLabel.Size = new System.Drawing.Size(184, 33);
             this.maNhomNguoiDungToolStripLabel.Text = "MaNhomNguoiDung:";
             // 
             // maNhomNguoiDungToolStripTextBox
             // 
             this.maNhomNguoiDungToolStripTextBox.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.maNhomNguoiDungToolStripTextBox.Name = "maNhomNguoiDungToolStripTextBox";
-            this.maNhomNguoiDungToolStripTextBox.Size = new System.Drawing.Size(100, 34);
+            this.maNhomNguoiDungToolStripTextBox.Size = new System.Drawing.Size(100, 38);
             // 
             // fill_DKToolStripButton
             // 
             this.fill_DKToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
             this.fill_DKToolStripButton.Name = "fill_DKToolStripButton";
-            this.fill_DKToolStripButton.Size = new System.Drawing.Size(67, 29);
+            this.fill_DKToolStripButton.Size = new System.Drawing.Size(67, 33);
             this.fill_DKToolStripButton.Text = "Fill_DK";
             this.fill_DKToolStripButton.Click += new System.EventHandler(this.fill_DKToolStripButton_Click);
             // 
@@ -292,7 +292,7 @@
             // 
             this.button1.Location = new System.Drawing.Point(386, 263);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.Size = new System.Drawing.Size(100, 35);
             this.button1.TabIndex = 4;
             this.button1.Text = ">>>";
             this.button1.UseVisualStyleBackColor = true;
@@ -302,7 +302,7 @@
             // 
             this.btnLoaiKhoiNhom.Location = new System.Drawing.Point(386, 352);
             this.btnLoaiKhoiNhom.Name = "btnLoaiKhoiNhom";
-            this.btnLoaiKhoiNhom.Size = new System.Drawing.Size(75, 23);
+            this.btnLoaiKhoiNhom.Size = new System.Drawing.Size(100, 35);
             this.btnLoaiKhoiNhom.TabIndex = 5;
             this.btnLoaiKhoiNhom.Text = "<<<";
             this.btnLoaiKhoiNhom.UseVisualStyleBackColor = true;
