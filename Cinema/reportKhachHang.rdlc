@@ -6,22 +6,22 @@
         <TablixBody>
           <TablixColumns>
             <TablixColumn>
-              <Width>1in</Width>
+              <Width>0.36806in</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>1.38889in</Width>
+              <Width>0.84028in</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>1in</Width>
-            </TablixColumn>
-            <TablixColumn>
-              <Width>1in</Width>
+              <Width>1.49306in</Width>
             </TablixColumn>
             <TablixColumn>
               <Width>1in</Width>
             </TablixColumn>
             <TablixColumn>
               <Width>1in</Width>
+            </TablixColumn>
+            <TablixColumn>
+              <Width>2.18056in</Width>
             </TablixColumn>
           </TablixColumns>
           <TablixRows>
@@ -419,9 +419,9 @@
         </TablixRowHierarchy>
         <DataSetName>KhachHang</DataSetName>
         <Top>0.77306in</Top>
-        <Left>0.50222in</Left>
+        <Left>0.18972in</Left>
         <Height>0.5in</Height>
-        <Width>6.38889in</Width>
+        <Width>6.88194in</Width>
         <Style>
           <Border>
             <Style>None</Style>
@@ -461,13 +461,13 @@
         </Style>
       </Textbox>
     </ReportItems>
-    <Height>2.83333in</Height>
+    <Height>2.49306in</Height>
     <Style />
   </Body>
   <Width>7.17361in</Width>
   <Page>
     <PageHeader>
-      <Height>1.11806in</Height>
+      <Height>1.00694in</Height>
       <PrintOnFirstPage>true</PrintOnFirstPage>
       <PrintOnLastPage>true</PrintOnLastPage>
       <ReportItems>
@@ -489,8 +489,8 @@
             </Paragraph>
           </Paragraphs>
           <rd:DefaultName>Textbox1</rd:DefaultName>
-          <Top>0.2175in</Top>
-          <Left>0.25222in</Left>
+          <Top>0.16194in</Top>
+          <Left>0.37028in</Left>
           <Height>0.63667in</Height>
           <Width>3.52083in</Width>
           <Style>
@@ -509,7 +509,7 @@
       </ReportItems>
       <Style>
         <Border>
-          <Style>None</Style>
+          <Style>Solid</Style>
         </Border>
         <BackgroundColor>Black</BackgroundColor>
       </Style>

@@ -114,5 +114,19 @@ namespace Cinema
             Ve ve = new Ve();
             ve.Show();
         }
+
+        private void btnTroGiup_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Liên hệ 0933888777 để được giúp đỡ","Trợ giúp", MessageBoxButtons.OK, MessageBoxIcon.Question);
+
+        }
+
+        private void btnGioiThieu_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Đây là ứng dụng được thiết kế và thực hiện bởi nhóm.\n" +
+                " - Ứng dụng quản lý rạp chiếu phim thông minh giúp đơn giản hóa mọi hoạt động từ bán vé, quản lý lịch chiếu đến báo cáo.\n" +
+                " - Với giao diện trực quan và dễ sử dụng, ứng dụng sẽ giúp tiết kiệm thời gian và nâng cao hiệu quả quản lý rạp chiếu phim.",
+            "Giới thiệu về ứng dụng", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
     }
 }

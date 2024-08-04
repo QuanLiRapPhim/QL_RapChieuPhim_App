@@ -87,6 +87,7 @@
             this.btnTroGiup.TabIndex = 1;
             this.btnTroGiup.Text = "Trợ Giúp";
             this.btnTroGiup.UseVisualStyleBackColor = true;
+            this.btnTroGiup.Click += new System.EventHandler(this.btnTroGiup_Click);
             // 
             // btnGioiThieu
             // 
@@ -96,6 +97,7 @@
             this.btnGioiThieu.TabIndex = 0;
             this.btnGioiThieu.Text = "Giới Thiệu";
             this.btnGioiThieu.UseVisualStyleBackColor = true;
+            this.btnGioiThieu.Click += new System.EventHandler(this.btnGioiThieu_Click);
             // 
             // btnQLKhachHang
             // 
