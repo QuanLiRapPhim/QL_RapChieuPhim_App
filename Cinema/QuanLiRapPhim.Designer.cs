@@ -29,12 +29,12 @@
         private void InitializeComponent()
         {
             this.panleft = new System.Windows.Forms.Panel();
+            this.btnLichChieu = new System.Windows.Forms.Button();
             this.btnPhim = new System.Windows.Forms.Button();
             this.btnTheLoai = new System.Windows.Forms.Button();
             this.panlTop = new System.Windows.Forms.Panel();
-            this.panlBody = new System.Windows.Forms.Panel();
-            this.btnLichChieu = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.panlBody = new System.Windows.Forms.Panel();
             this.panleft.SuspendLayout();
             this.panlTop.SuspendLayout();
             this.SuspendLayout();
@@ -47,8 +47,18 @@
             this.panleft.Controls.Add(this.btnTheLoai);
             this.panleft.Location = new System.Drawing.Point(-1, -2);
             this.panleft.Name = "panleft";
-            this.panleft.Size = new System.Drawing.Size(219, 701);
+            this.panleft.Size = new System.Drawing.Size(219, 793);
             this.panleft.TabIndex = 0;
+            // 
+            // btnLichChieu
+            // 
+            this.btnLichChieu.Location = new System.Drawing.Point(3, 331);
+            this.btnLichChieu.Name = "btnLichChieu";
+            this.btnLichChieu.Size = new System.Drawing.Size(216, 113);
+            this.btnLichChieu.TabIndex = 2;
+            this.btnLichChieu.Text = "Lịch chiếu phim";
+            this.btnLichChieu.UseVisualStyleBackColor = true;
+            this.btnLichChieu.Click += new System.EventHandler(this.btnLichChieu_Click);
             // 
             // btnPhim
             // 
@@ -76,26 +86,8 @@
             this.panlTop.Controls.Add(this.label1);
             this.panlTop.Location = new System.Drawing.Point(215, -2);
             this.panlTop.Name = "panlTop";
-            this.panlTop.Size = new System.Drawing.Size(1197, 114);
+            this.panlTop.Size = new System.Drawing.Size(1200, 114);
             this.panlTop.TabIndex = 1;
-            // 
-            // panlBody
-            // 
-            this.panlBody.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.panlBody.Location = new System.Drawing.Point(215, 111);
-            this.panlBody.Name = "panlBody";
-            this.panlBody.Size = new System.Drawing.Size(1197, 591);
-            this.panlBody.TabIndex = 2;
-            // 
-            // btnLichChieu
-            // 
-            this.btnLichChieu.Location = new System.Drawing.Point(3, 331);
-            this.btnLichChieu.Name = "btnLichChieu";
-            this.btnLichChieu.Size = new System.Drawing.Size(216, 113);
-            this.btnLichChieu.TabIndex = 2;
-            this.btnLichChieu.Text = "Lịch chiếu phim";
-            this.btnLichChieu.UseVisualStyleBackColor = true;
-            this.btnLichChieu.Click += new System.EventHandler(this.btnLichChieu_Click);
             // 
             // label1
             // 
@@ -107,11 +99,19 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "TRANG QUẢN LÍ PHIM";
             // 
+            // panlBody
+            // 
+            this.panlBody.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.panlBody.Location = new System.Drawing.Point(215, 111);
+            this.panlBody.Name = "panlBody";
+            this.panlBody.Size = new System.Drawing.Size(1200, 680);
+            this.panlBody.TabIndex = 2;
+            // 
             // QuanLiRapPhim
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1424, 700);
+            this.ClientSize = new System.Drawing.Size(1421, 792);
             this.Controls.Add(this.panlBody);
             this.Controls.Add(this.panlTop);
             this.Controls.Add(this.panleft);
