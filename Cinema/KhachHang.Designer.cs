@@ -45,6 +45,7 @@
             this.txtMaKH = new System.Windows.Forms.TextBox();
             this.btnSua = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -154,9 +155,9 @@
             // btnXoa
             // 
             this.btnXoa.BackColor = System.Drawing.Color.White;
-            this.btnXoa.Location = new System.Drawing.Point(852, 304);
+            this.btnXoa.Location = new System.Drawing.Point(852, 291);
             this.btnXoa.Name = "btnXoa";
-            this.btnXoa.Size = new System.Drawing.Size(198, 50);
+            this.btnXoa.Size = new System.Drawing.Size(200, 50);
             this.btnXoa.TabIndex = 12;
             this.btnXoa.Text = "Xóa";
             this.btnXoa.UseVisualStyleBackColor = false;
@@ -183,7 +184,7 @@
             // 
             this.btnSua.Location = new System.Drawing.Point(852, 228);
             this.btnSua.Name = "btnSua";
-            this.btnSua.Size = new System.Drawing.Size(198, 56);
+            this.btnSua.Size = new System.Drawing.Size(200, 50);
             this.btnSua.TabIndex = 15;
             this.btnSua.Text = "Sửa";
             this.btnSua.UseVisualStyleBackColor = true;
@@ -198,12 +199,23 @@
             this.panel1.Size = new System.Drawing.Size(1231, 79);
             this.panel1.TabIndex = 16;
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(852, 164);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(200, 50);
+            this.button1.TabIndex = 17;
+            this.button1.Text = "Báo cáo";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
+            // 
             // KhachHang
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(206)))), ((int)(((byte)(104)))));
             this.ClientSize = new System.Drawing.Size(1234, 644);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.btnSua);
             this.Controls.Add(this.txtMaKH);
@@ -251,5 +263,6 @@
         private System.Windows.Forms.TextBox txtMaKH;
         private System.Windows.Forms.Button btnSua;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Button button1;
     }
 }
