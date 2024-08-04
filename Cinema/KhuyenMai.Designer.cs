@@ -47,6 +47,7 @@
             this.datNgayKetThuc = new System.Windows.Forms.DateTimePicker();
             this.label7 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnTaoMoi = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -219,12 +220,23 @@
             this.panel1.Size = new System.Drawing.Size(1006, 74);
             this.panel1.TabIndex = 18;
             // 
+            // btnTaoMoi
+            // 
+            this.btnTaoMoi.Location = new System.Drawing.Point(142, 382);
+            this.btnTaoMoi.Name = "btnTaoMoi";
+            this.btnTaoMoi.Size = new System.Drawing.Size(91, 34);
+            this.btnTaoMoi.TabIndex = 19;
+            this.btnTaoMoi.Text = "Tạo mới";
+            this.btnTaoMoi.UseVisualStyleBackColor = true;
+            this.btnTaoMoi.Click += new System.EventHandler(this.btnTaoMoi_Click);
+            // 
             // KhuyenMai
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(206)))), ((int)(((byte)(104)))));
             this.ClientSize = new System.Drawing.Size(1008, 659);
+            this.Controls.Add(this.btnTaoMoi);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.datNgayKetThuc);
             this.Controls.Add(this.datNgayBatDau);
@@ -276,5 +288,6 @@
         private System.Windows.Forms.DateTimePicker datNgayKetThuc;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Button btnTaoMoi;
     }
 }

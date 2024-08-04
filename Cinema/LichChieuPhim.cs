@@ -74,25 +74,49 @@ namespace Cinema
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if (cboPhongChieu.SelectedValue is int phongchieu)
+            // Kiểm tra nếu bất kỳ trường nào bị để trống
+            if (string.IsNullOrWhiteSpace(cboPhimChieu.Text) ||
+                string.IsNullOrWhiteSpace(cboPhongChieu.Text) ||
+                string.IsNullOrWhiteSpace(txtSoGheTrong.Text))
             {
-                if(cboPhimChieu.SelectedValue is int phim)
+                MessageBox.Show("Vui lòng nhập đủ thông tin!");
+            }
+            else
+            {
+                if (cboPhongChieu.SelectedValue is int phongchieu)
                 {
-                    DateTime ThoiDiemChieu = datThoiDiemChieu.Value;
-                    lichbll.InsertSuatChieu(phim, phongchieu, ThoiDiemChieu, int.Parse(txtSoGheTrong.Text));
-                        
-                    LichChieuPhim_Load(sender, e);
-                    MessageBox.Show("Thêm thành công!");
+                    if (cboPhimChieu.SelectedValue is int phim)
+                    {
+                        DateTime ThoiDiemChieu = datThoiDiemChieu.Value;
+                        lichbll.InsertSuatChieu(phim, phongchieu, ThoiDiemChieu, int.Parse(txtSoGheTrong.Text));
+
+                        LichChieuPhim_Load(sender, e);
+                        LamTrongDuLieuNhap();
+                        MessageBox.Show("Thêm thành công!");
+                    }
+
                 }
-               
             }
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            lichbll.DeleteSuatChieu(int.Parse(txtMaXuat.Text));
-            LichChieuPhim_Load(sender, e);
-            MessageBox.Show("Xóa thành công!");
+          
+                if (txtMaXuat.Text == "")
+                {
+                    MessageBox.Show("Vui lòng chọn nội dung cần xóa!");
+                }
+                else
+                {
+                    lichbll.DeleteSuatChieu(int.Parse(txtMaXuat.Text));
+                    LichChieuPhim_Load(sender, e);
+                    LamTrongDuLieuNhap();
+                  
+
+                }
+
+            
+          
         }
        
 
@@ -119,18 +143,25 @@ namespace Cinema
 
         private void button3_Click(object sender, EventArgs e)
         {
-            
-            if (cboPhongChieu.SelectedValue is int phongchieu)
+            if (txtMaXuat.Text == "")
             {
-                if (cboPhimChieu.SelectedValue is int phim)
+                MessageBox.Show("Vui lòng chọn nội dung cần cập nhật!");
+            }
+            else
+            {
+                if (cboPhongChieu.SelectedValue is int phongchieu)
                 {
-                    DateTime ThoiDiemChieu = datThoiDiemChieu.Value;
-                    lichbll.UpdateSuatChieu(int.Parse(txtMaXuat.Text),phim, phongchieu, ThoiDiemChieu, int.Parse(txtSoGheTrong.Text));
+                    if (cboPhimChieu.SelectedValue is int phim)
+                    {
+                        DateTime ThoiDiemChieu = datThoiDiemChieu.Value;
+                        lichbll.UpdateSuatChieu(int.Parse(txtMaXuat.Text), phim, phongchieu, ThoiDiemChieu, int.Parse(txtSoGheTrong.Text));
 
-                    LichChieuPhim_Load(sender, e);
-                    MessageBox.Show("Sửa thành công!");
+                        LichChieuPhim_Load(sender, e);
+                        LamTrongDuLieuNhap();
+                        MessageBox.Show("Sửa thành công!");
+                    }
+
                 }
-
             }
         }
 
@@ -138,10 +169,22 @@ namespace Cinema
         {
             this.Close();
         }
-
+        public void LamTrongDuLieuNhap()
+        {
+            txtMaXuat.Text = "";
+            txtSoGheTrong.Text = "";
+            cboPhimChieu.Text = "";
+            cboPhongChieu.Text = "";
+            cboRap.Text = "";
+        }
         private void button5_Click(object sender, EventArgs e)
         {
-            txtSoGheTrong.Text = "";
+            LamTrongDuLieuNhap();
+        }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
         }
     }
 }

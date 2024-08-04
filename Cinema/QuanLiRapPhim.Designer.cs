@@ -116,6 +116,7 @@
             this.Controls.Add(this.panlTop);
             this.Controls.Add(this.panleft);
             this.Name = "QuanLiRapPhim";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "QuanLiRapPhim";
             this.panleft.ResumeLayout(false);
             this.panlTop.ResumeLayout(false);

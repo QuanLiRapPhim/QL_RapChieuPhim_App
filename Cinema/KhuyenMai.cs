@@ -18,6 +18,12 @@ namespace Cinema
         {
             InitializeComponent();
         }
+        public void LamTrongDuLieuNhap()
+        {
+            txtTieuDe.Text = "";
+            txtGiamGia.Text = "";
+            txtMoTa.Text = "";
+        }
 
         private void btnThem_Click(object sender, EventArgs e)
         {
@@ -27,8 +33,9 @@ namespace Cinema
             dllKM.InsertKhuyenMai(txtTieuDe.Text, txtMoTa.Text, giamGia, ngayBatDau, ngayKetThuc);
             KhuyenMai_Load(sender, e);
             MessageBox.Show("Thêm thành công!");
+            LamTrongDuLieuNhap();
         }
-
+        
         private void KhuyenMai_Load(object sender, EventArgs e)
         {
             dataGridView1.DataSource= dllKM.loadKhuyenMai();
@@ -58,6 +65,7 @@ namespace Cinema
             dllKM.DeleteKhuyenMai(int.Parse(txtMaKM.Text));
             KhuyenMai_Load(sender, e);
             MessageBox.Show("Xóa thành công");
+            LamTrongDuLieuNhap();
         }
 
         private void btnSua_Click(object sender, EventArgs e)
@@ -68,11 +76,17 @@ namespace Cinema
             dllKM.UpdateKhuyenMai(int.Parse(txtMaKM.Text),txtTieuDe.Text, txtMoTa.Text, giamGia, ngayBatDau, ngayKetThuc);
             KhuyenMai_Load(sender, e);
             MessageBox.Show("Sửa thành công");
+            LamTrongDuLieuNhap();
         }
 
         private void btnThoat_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void btnTaoMoi_Click(object sender, EventArgs e)
+        {
+            LamTrongDuLieuNhap();
         }
     }
 }

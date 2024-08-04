@@ -51,6 +51,7 @@
     <Compile Include="Phim_BLL_DAL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TheLoaiPhim_BLL_DAL.cs" />
+    <Compile Include="Ve_BLL_DAL.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\DTO\DTO.csproj">

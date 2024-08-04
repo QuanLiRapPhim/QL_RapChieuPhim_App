@@ -32,7 +32,6 @@
             this.btnThem = new System.Windows.Forms.Button();
             this.btnSua = new System.Windows.Forms.Button();
             this.btnXoa = new System.Windows.Forms.Button();
-            this.btnThoat = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.txtMaTL = new System.Windows.Forms.TextBox();
@@ -40,6 +39,7 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btnTaoMoi = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -48,17 +48,17 @@
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(155, 334);
+            this.dataGridView1.Location = new System.Drawing.Point(141, 334);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 62;
             this.dataGridView1.RowTemplate.Height = 28;
-            this.dataGridView1.Size = new System.Drawing.Size(797, 244);
+            this.dataGridView1.Size = new System.Drawing.Size(811, 244);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             // 
             // btnThem
             // 
-            this.btnThem.Location = new System.Drawing.Point(71, 25);
+            this.btnThem.Location = new System.Drawing.Point(137, 25);
             this.btnThem.Name = "btnThem";
             this.btnThem.Size = new System.Drawing.Size(100, 35);
             this.btnThem.TabIndex = 1;
@@ -68,7 +68,7 @@
             // 
             // btnSua
             // 
-            this.btnSua.Location = new System.Drawing.Point(201, 25);
+            this.btnSua.Location = new System.Drawing.Point(267, 25);
             this.btnSua.Name = "btnSua";
             this.btnSua.Size = new System.Drawing.Size(100, 35);
             this.btnSua.TabIndex = 2;
@@ -78,23 +78,13 @@
             // 
             // btnXoa
             // 
-            this.btnXoa.Location = new System.Drawing.Point(329, 25);
+            this.btnXoa.Location = new System.Drawing.Point(395, 25);
             this.btnXoa.Name = "btnXoa";
             this.btnXoa.Size = new System.Drawing.Size(100, 35);
             this.btnXoa.TabIndex = 3;
             this.btnXoa.Text = "Xóa";
             this.btnXoa.UseVisualStyleBackColor = true;
             this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
-            // 
-            // btnThoat
-            // 
-            this.btnThoat.Location = new System.Drawing.Point(462, 25);
-            this.btnThoat.Name = "btnThoat";
-            this.btnThoat.Size = new System.Drawing.Size(100, 35);
-            this.btnThoat.TabIndex = 4;
-            this.btnThoat.Text = "Thoát";
-            this.btnThoat.UseVisualStyleBackColor = true;
-            this.btnThoat.Click += new System.EventHandler(this.btnThoat_Click);
             // 
             // label1
             // 
@@ -116,17 +106,17 @@
             // 
             // txtMaTL
             // 
-            this.txtMaTL.Location = new System.Drawing.Point(434, 124);
+            this.txtMaTL.Location = new System.Drawing.Point(420, 124);
             this.txtMaTL.Name = "txtMaTL";
             this.txtMaTL.ReadOnly = true;
-            this.txtMaTL.Size = new System.Drawing.Size(283, 26);
+            this.txtMaTL.Size = new System.Drawing.Size(297, 26);
             this.txtMaTL.TabIndex = 7;
             // 
             // txtTenTL
             // 
-            this.txtTenTL.Location = new System.Drawing.Point(434, 157);
+            this.txtTenTL.Location = new System.Drawing.Point(420, 157);
             this.txtTenTL.Name = "txtTenTL";
-            this.txtTenTL.Size = new System.Drawing.Size(283, 26);
+            this.txtTenTL.Size = new System.Drawing.Size(297, 26);
             this.txtTenTL.TabIndex = 8;
             // 
             // panel1
@@ -152,16 +142,26 @@
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.White;
+            this.groupBox1.Controls.Add(this.btnTaoMoi);
             this.groupBox1.Controls.Add(this.btnThem);
             this.groupBox1.Controls.Add(this.btnSua);
             this.groupBox1.Controls.Add(this.btnXoa);
-            this.groupBox1.Controls.Add(this.btnThoat);
-            this.groupBox1.Location = new System.Drawing.Point(234, 219);
+            this.groupBox1.Location = new System.Drawing.Point(280, 226);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(631, 72);
+            this.groupBox1.Size = new System.Drawing.Size(522, 72);
             this.groupBox1.TabIndex = 10;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Chỉnh sửa thông tin";
+            // 
+            // btnTaoMoi
+            // 
+            this.btnTaoMoi.Location = new System.Drawing.Point(24, 26);
+            this.btnTaoMoi.Name = "btnTaoMoi";
+            this.btnTaoMoi.Size = new System.Drawing.Size(100, 35);
+            this.btnTaoMoi.TabIndex = 5;
+            this.btnTaoMoi.Text = "Tạo mới";
+            this.btnTaoMoi.UseVisualStyleBackColor = true;
+            this.btnTaoMoi.Click += new System.EventHandler(this.btnTaoMoi_Click);
             // 
             // TheLoaiPhim
             // 
@@ -194,7 +194,6 @@
         private System.Windows.Forms.Button btnThem;
         private System.Windows.Forms.Button btnSua;
         private System.Windows.Forms.Button btnXoa;
-        private System.Windows.Forms.Button btnThoat;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtMaTL;
@@ -202,5 +201,6 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.Button btnTaoMoi;
     }
 }

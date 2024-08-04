@@ -28,6 +28,7 @@ namespace Cinema
         {
             TL_DAL.InsertTheLoai(txtTenTL.Text);
             TheLoaiPhim_Load(sender, e);
+            LamTrongDuLieuNhap();
             MessageBox.Show("Thêm thành công!");
 
         }
@@ -36,6 +37,7 @@ namespace Cinema
         {
             TL_DAL.UpdateTheLoai(int.Parse(txtMaTL.Text),txtTenTL.Text);
             TheLoaiPhim_Load(sender, e);
+            LamTrongDuLieuNhap();
             MessageBox.Show("Sửa thành công!");
         }
 
@@ -54,12 +56,24 @@ namespace Cinema
         {
             TL_DAL.DeleteTheLoai(int.Parse(txtMaTL.Text));
             TheLoaiPhim_Load(sender,e);
-            MessageBox.Show("Xóa thành công!");
+            LamTrongDuLieuNhap();
+
+          
         }
 
         private void btnThoat_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+        public void LamTrongDuLieuNhap()
+        {
+            txtMaTL.Text = "";
+            txtTenTL.Text = "";
+        }
+
+        private void btnTaoMoi_Click(object sender, EventArgs e)
+        {
+            LamTrongDuLieuNhap();
         }
     }
 }

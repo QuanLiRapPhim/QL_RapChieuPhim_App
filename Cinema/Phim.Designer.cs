@@ -52,6 +52,7 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label9 = new System.Windows.Forms.Label();
+            this.btnTaoMoi = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -195,9 +196,9 @@
             // 
             // btnThemPhim
             // 
-            this.btnThemPhim.Location = new System.Drawing.Point(38, 56);
+            this.btnThemPhim.Location = new System.Drawing.Point(38, 83);
             this.btnThemPhim.Name = "btnThemPhim";
-            this.btnThemPhim.Size = new System.Drawing.Size(118, 41);
+            this.btnThemPhim.Size = new System.Drawing.Size(100, 40);
             this.btnThemPhim.TabIndex = 19;
             this.btnThemPhim.Text = "Thêm";
             this.btnThemPhim.UseVisualStyleBackColor = true;
@@ -205,9 +206,9 @@
             // 
             // btnXoaPhim
             // 
-            this.btnXoaPhim.Location = new System.Drawing.Point(38, 119);
+            this.btnXoaPhim.Location = new System.Drawing.Point(38, 129);
             this.btnXoaPhim.Name = "btnXoaPhim";
-            this.btnXoaPhim.Size = new System.Drawing.Size(118, 36);
+            this.btnXoaPhim.Size = new System.Drawing.Size(100, 40);
             this.btnXoaPhim.TabIndex = 20;
             this.btnXoaPhim.Text = "Xóa";
             this.btnXoaPhim.UseVisualStyleBackColor = true;
@@ -215,9 +216,9 @@
             // 
             // btnSuaPhim
             // 
-            this.btnSuaPhim.Location = new System.Drawing.Point(38, 170);
+            this.btnSuaPhim.Location = new System.Drawing.Point(38, 180);
             this.btnSuaPhim.Name = "btnSuaPhim";
-            this.btnSuaPhim.Size = new System.Drawing.Size(118, 39);
+            this.btnSuaPhim.Size = new System.Drawing.Size(100, 40);
             this.btnSuaPhim.TabIndex = 21;
             this.btnSuaPhim.Text = "Sửa";
             this.btnSuaPhim.UseVisualStyleBackColor = true;
@@ -242,12 +243,13 @@
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.White;
+            this.groupBox1.Controls.Add(this.btnTaoMoi);
             this.groupBox1.Controls.Add(this.btnXoaPhim);
             this.groupBox1.Controls.Add(this.btnThemPhim);
             this.groupBox1.Controls.Add(this.btnSuaPhim);
             this.groupBox1.Location = new System.Drawing.Point(152, 157);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(193, 230);
+            this.groupBox1.Size = new System.Drawing.Size(181, 230);
             this.groupBox1.TabIndex = 24;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Chỉnh sửa thông tin";
@@ -271,6 +273,16 @@
             this.label9.Size = new System.Drawing.Size(136, 52);
             this.label9.TabIndex = 26;
             this.label9.Text = "PHIM";
+            // 
+            // btnTaoMoi
+            // 
+            this.btnTaoMoi.Location = new System.Drawing.Point(38, 37);
+            this.btnTaoMoi.Name = "btnTaoMoi";
+            this.btnTaoMoi.Size = new System.Drawing.Size(100, 40);
+            this.btnTaoMoi.TabIndex = 22;
+            this.btnTaoMoi.Text = "Tạo mới";
+            this.btnTaoMoi.UseVisualStyleBackColor = true;
+            this.btnTaoMoi.Click += new System.EventHandler(this.btnTaoMoi_Click);
             // 
             // Phim
             // 
@@ -336,5 +348,6 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Button btnTaoMoi;
     }
 }

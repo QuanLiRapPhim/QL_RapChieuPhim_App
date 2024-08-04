@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace BLL
 {
@@ -41,13 +42,40 @@ namespace BLL
             // Lưu thay đổi vào cơ sở dữ liệu
             cinema.SubmitChanges();
         }
-        
+
         public void Load_phim_delete(int maphim)
         {
-            Phim delphim=cinema.Phims.Where(phim=>phim.MaPhim==maphim).FirstOrDefault();
-            cinema.Phims.DeleteOnSubmit(delphim);
-            cinema.SubmitChanges();
+            // Tìm phim cần xóa
+            Phim delphim = cinema.Phims.Where(phim => phim.MaPhim == maphim).FirstOrDefault();
+
+            if (delphim != null)
+            {
+                // Kiểm tra xem phim có đang được sử dụng ở bảng DanhGiaPhim hay không
+                bool isBeingUsedInDanhGiaPhim = cinema.DanhGiaPhims.Any(danhgia => danhgia.MaPhim == maphim);
+
+                // Kiểm tra xem phim có đang được sử dụng ở bảng SuatChieu hay không
+                bool isBeingUsedInSuatChieu = cinema.SuatChieus.Any(suatchieu => suatchieu.MaPhim == maphim);
+
+                if (isBeingUsedInDanhGiaPhim || isBeingUsedInSuatChieu)
+                {
+                    // Hiển thị thông báo nếu phim đang được sử dụng
+                    MessageBox.Show("Phim đang được sử dụng trong DanhGiaPhim hoặc SuatChieu!\nVui lòng xóa các bản ghi liên quan trước khi hoàn tất tác vụ!");
+                    MessageBox.Show("Xóa không thành công!");
+                }
+                else
+                {
+                    // Xóa phim nếu không có ràng buộc
+                    cinema.Phims.DeleteOnSubmit(delphim);
+                    cinema.SubmitChanges();
+                    MessageBox.Show("Phim đã được xóa thành công.");
+                }
+            }
+            else
+            {
+                MessageBox.Show("Phim không tồn tại.");
+            }
         }
+
         public void UpdatePhim(int maPhim, string tenPhim, int maTheLoai, string daoDien, int thoiLuong, string tomTat, DateTime ngayKhoiChieu, string hinhAnh)
         {
             // Tìm phim theo mã phim

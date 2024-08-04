@@ -52,21 +52,27 @@ namespace BLL
             // Tìm suất chiếu cần xóa
             SuatChieu delSuatChieu = cinema.SuatChieus.Where(suatChieu => suatChieu.MaSuatChieu == maSuatChieu).FirstOrDefault();
 
-            // Kiểm tra nếu suất chiếu tồn tại
-            if (delSuatChieu != null)
-            {
-                // Xóa suất chiếu khỏi tập hợp SuatChieus
-                cinema.SuatChieus.DeleteOnSubmit(delSuatChieu);
+   
+                // Kiểm tra xem suất chiếu có đang được sử dụng trong bảng Ve hay không
+                bool isBeingUsedInVe = cinema.Ves.Any(ve => ve.MaSuatChieu == maSuatChieu);
 
-                // Lưu thay đổi vào cơ sở dữ liệu
-                cinema.SubmitChanges();
-            }
-            else
-            {
-                
-                MessageBox.Show("Suất chiếu không tồn tại.");
-            }
+                if (isBeingUsedInVe)
+                {
+                    // Hiển thị thông báo nếu suất chiếu đang được sử dụng
+                    MessageBox.Show("Suất chiếu đang được sử dụng trong bảng Ve!\nVui lòng xóa các bản ghi liên quan trước khi hoàn tất tác vụ!");
+                    MessageBox.Show("Xóa không thành công!");
+                }
+                else
+                {
+                    // Xóa suất chiếu nếu không có ràng buộc
+                    cinema.SuatChieus.DeleteOnSubmit(delSuatChieu);
+                    cinema.SubmitChanges();
+                    MessageBox.Show("Suất chiếu đã được xóa thành công.");
+                }
+            
+
         }
+
         public void UpdateSuatChieu(int maSuatChieu, int maPhim, int maManHinh, DateTime thoiGianChieu, int soGheTrong)
         {
             // Tìm suất chiếu theo mã suất chiếu

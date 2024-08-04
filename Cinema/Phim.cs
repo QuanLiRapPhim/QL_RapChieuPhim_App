@@ -68,23 +68,44 @@ namespace Cinema
 
         private void btnThemPhim_Click(object sender, EventArgs e)
         {
-            if (cboTheLoai.SelectedValue is int maTheLoai)
+            if (string.IsNullOrWhiteSpace(cboTheLoai.Text) ||
+            string.IsNullOrWhiteSpace(txtTenPhim.Text) ||
+            string.IsNullOrWhiteSpace(txtDaoDien.Text) ||
+            string.IsNullOrWhiteSpace(txtHinhAnh.Text) ||
+            string.IsNullOrWhiteSpace(txtThoiLuong.Text) ||
+            string.IsNullOrWhiteSpace(txtTomTat.Text))
             {
-                DateTime ngayKhoiChieu = Dat_ngaykhoichieu.Value;
-                bllphim.InsertPhim( txtTenPhim.Text, maTheLoai,txtDaoDien.Text,int.Parse(txtThoiLuong.Text),
-                    txtTomTat.Text, ngayKhoiChieu, txtHinhAnh.Text);
-                Phim_Load(sender, e );
-                MessageBox.Show("Thêm thành công!");
+                MessageBox.Show("Vui lòng nhập đủ!");
             }
-        
-           
+            else
+            {
+                if (cboTheLoai.SelectedValue is int maTheLoai)
+                {
+                    DateTime ngayKhoiChieu = Dat_ngaykhoichieu.Value;
+                    bllphim.InsertPhim(txtTenPhim.Text, maTheLoai, txtDaoDien.Text, int.Parse(txtThoiLuong.Text),
+                        txtTomTat.Text, ngayKhoiChieu, txtHinhAnh.Text);
+                    Phim_Load(sender, e);
+                    LamTrongDuLieuNhap();
+                    MessageBox.Show("Thêm thành công!");
+                }
+
+            }
         }
 
         private void btnXoaPhim_Click(object sender, EventArgs e)
         {
-            bllphim.Load_phim_delete(int.Parse(txtMaPhim.Text));
-            Phim_Load(sender,e);
-            MessageBox.Show("Xóa thành công!");
+            if (txtMaPhim.Text == "")
+            {
+                MessageBox.Show("Vui lòng chọn nội dung cần xóa!");
+            }
+            else
+            {
+                bllphim.Load_phim_delete(int.Parse(txtMaPhim.Text));
+                Phim_Load(sender, e);
+                LamTrongDuLieuNhap();
+
+            }
+
         }
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -110,19 +131,45 @@ namespace Cinema
 
         private void btnSuaPhim_Click(object sender, EventArgs e)
         {
-            if (cboTheLoai.SelectedValue is int maTheLoai)
+
+            if (txtMaPhim.Text == "")
             {
-                DateTime ngayKhoiChieu = Dat_ngaykhoichieu.Value;
-                bllphim.UpdatePhim(int.Parse(txtMaPhim.Text),txtTenPhim.Text, maTheLoai, txtDaoDien.Text, int.Parse(txtThoiLuong.Text),
-                    txtTomTat.Text, ngayKhoiChieu, txtHinhAnh.Text);
-                Phim_Load(sender, e);
-                MessageBox.Show("Sửa thành công!");
+                MessageBox.Show("Vui lòng chọn nội dung cần cập nhật!");
             }
+            else
+            {
+                if (cboTheLoai.SelectedValue is int maTheLoai)
+                {
+                    DateTime ngayKhoiChieu = Dat_ngaykhoichieu.Value;
+                    bllphim.UpdatePhim(int.Parse(txtMaPhim.Text), txtTenPhim.Text, maTheLoai, txtDaoDien.Text, int.Parse(txtThoiLuong.Text),
+                        txtTomTat.Text, ngayKhoiChieu, txtHinhAnh.Text);
+                    Phim_Load(sender, e);
+                    LamTrongDuLieuNhap();
+                    MessageBox.Show("Sửa thành công!");
+                }
+
+            }
+           
         }
 
         private void Phim_Load_1(object sender, EventArgs e)
         {
 
+        }
+        public void LamTrongDuLieuNhap()
+        {
+            cboTheLoai.Text = "";
+            txtMaPhim.Text = "";
+            txtTenPhim.Text = "";
+            txtDaoDien.Text = "";
+            txtHinhAnh.Text = "";
+            txtThoiLuong.Text = "";
+            txtTomTat.Text = "";
+        }
+
+        private void btnTaoMoi_Click(object sender, EventArgs e)
+        {
+            LamTrongDuLieuNhap();
         }
     }
 }

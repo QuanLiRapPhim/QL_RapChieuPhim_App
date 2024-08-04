@@ -36,12 +36,15 @@ namespace Cinema
             int makh = Convert.ToInt32(dataGridView1.CurrentRow.Cells["MaKhachHang"].Value);
             bllkh.Load_kh_delete(makh);
             KhachHang_Load(sender, e);
+            MessageBox.Show("Xóa thành công!");
         }
 
         private void btnSua_Click(object sender, EventArgs e)
         {
             int maKH = Convert.ToInt32(txtMaKH.Text);
             bllkh.Load_kh_update(maKH, txtTenKH.Text,txtEmail.Text, txtSDT.Text, txtDiaChi.Text, txtMatKhau.Text);
+            KhachHang_Load(sender,e);
+            MessageBox.Show("Sửa thành công!");
         }
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
