@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
             this.btnDangXuat = new System.Windows.Forms.Button();
             this.btnTroGiup = new System.Windows.Forms.Button();
             this.btnGioiThieu = new System.Windows.Forms.Button();
@@ -36,10 +37,9 @@
             this.btnQLNhanVien = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.btnQLVe = new System.Windows.Forms.Button();
             this.btnQLKhuyenMai = new System.Windows.Forms.Button();
             this.btnCacPhim = new System.Windows.Forms.Button();
-            this.btnQLVe = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -57,6 +57,17 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(307, 664);
             this.panel1.TabIndex = 0;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Black;
+            this.label1.Location = new System.Drawing.Point(3, 7);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(293, 52);
+            this.label1.TabIndex = 3;
+            this.label1.Text = "TRANG CHỦ";
             // 
             // btnDangXuat
             // 
@@ -89,9 +100,9 @@
             // btnQLKhachHang
             // 
             this.btnQLKhachHang.BackColor = System.Drawing.Color.PaleTurquoise;
-            this.btnQLKhachHang.Location = new System.Drawing.Point(29, 38);
+            this.btnQLKhachHang.Location = new System.Drawing.Point(40, 231);
             this.btnQLKhachHang.Name = "btnQLKhachHang";
-            this.btnQLKhachHang.Size = new System.Drawing.Size(349, 145);
+            this.btnQLKhachHang.Size = new System.Drawing.Size(338, 122);
             this.btnQLKhachHang.TabIndex = 1;
             this.btnQLKhachHang.Text = "Quản lí khách hàng";
             this.btnQLKhachHang.UseVisualStyleBackColor = false;
@@ -100,7 +111,7 @@
             // btnQLNhanVien
             // 
             this.btnQLNhanVien.BackColor = System.Drawing.Color.PaleTurquoise;
-            this.btnQLNhanVien.Location = new System.Drawing.Point(430, 38);
+            this.btnQLNhanVien.Location = new System.Drawing.Point(40, 37);
             this.btnQLNhanVien.Name = "btnQLNhanVien";
             this.btnQLNhanVien.Size = new System.Drawing.Size(340, 145);
             this.btnQLNhanVien.TabIndex = 2;
@@ -111,7 +122,6 @@
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.White;
-            this.groupBox1.Controls.Add(this.btnQLKhachHang);
             this.groupBox1.Controls.Add(this.btnQLNhanVien);
             this.groupBox1.Location = new System.Drawing.Point(347, 451);
             this.groupBox1.Name = "groupBox1";
@@ -124,6 +134,7 @@
             // groupBox2
             // 
             this.groupBox2.BackColor = System.Drawing.Color.White;
+            this.groupBox2.Controls.Add(this.btnQLKhachHang);
             this.groupBox2.Controls.Add(this.btnQLVe);
             this.groupBox2.Controls.Add(this.btnQLKhuyenMai);
             this.groupBox2.Controls.Add(this.btnCacPhim);
@@ -135,6 +146,17 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Tag = "2";
             this.groupBox2.Text = "Quản lí rạp phim";
+            // 
+            // btnQLVe
+            // 
+            this.btnQLVe.BackColor = System.Drawing.Color.PaleTurquoise;
+            this.btnQLVe.Location = new System.Drawing.Point(430, 44);
+            this.btnQLVe.Name = "btnQLVe";
+            this.btnQLVe.Size = new System.Drawing.Size(340, 123);
+            this.btnQLVe.TabIndex = 5;
+            this.btnQLVe.Text = "Quản lí vé";
+            this.btnQLVe.UseVisualStyleBackColor = false;
+            this.btnQLVe.Click += new System.EventHandler(this.btnQLVe_Click_1);
             // 
             // btnQLKhuyenMai
             // 
@@ -152,33 +174,11 @@
             this.btnCacPhim.BackColor = System.Drawing.Color.PaleTurquoise;
             this.btnCacPhim.Location = new System.Drawing.Point(40, 44);
             this.btnCacPhim.Name = "btnCacPhim";
-            this.btnCacPhim.Size = new System.Drawing.Size(338, 309);
+            this.btnCacPhim.Size = new System.Drawing.Size(338, 123);
             this.btnCacPhim.TabIndex = 2;
             this.btnCacPhim.Text = "Quản lí các phim";
             this.btnCacPhim.UseVisualStyleBackColor = false;
             this.btnCacPhim.Click += new System.EventHandler(this.btnQLVe_Click);
-            // 
-            // btnQLVe
-            // 
-            this.btnQLVe.BackColor = System.Drawing.Color.PaleTurquoise;
-            this.btnQLVe.Location = new System.Drawing.Point(430, 44);
-            this.btnQLVe.Name = "btnQLVe";
-            this.btnQLVe.Size = new System.Drawing.Size(340, 123);
-            this.btnQLVe.TabIndex = 5;
-            this.btnQLVe.Text = "Quản lí vé";
-            this.btnQLVe.UseVisualStyleBackColor = false;
-            this.btnQLVe.Click += new System.EventHandler(this.btnQLVe_Click_1);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(3, 7);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(293, 52);
-            this.label1.TabIndex = 3;
-            this.label1.Text = "TRANG CHỦ";
             // 
             // panel2
             // 

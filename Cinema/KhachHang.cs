@@ -33,18 +33,32 @@ namespace Cinema
 
         private void button1_Click(object sender, EventArgs e)
         {
-            int makh = Convert.ToInt32(dataGridView1.CurrentRow.Cells["MaKhachHang"].Value);
-            bllkh.Load_kh_delete(makh);
-            KhachHang_Load(sender, e);
-            MessageBox.Show("Xóa thành công!");
+            if (txtMaKH.Text == "")
+            {
+                MessageBox.Show("Vui lòng chọn nội dung cần cập nhật!");
+            }
+            else
+            {
+                int makh = Convert.ToInt32(dataGridView1.CurrentRow.Cells["MaKhachHang"].Value);
+                bllkh.Load_kh_delete(makh);
+                KhachHang_Load(sender, e);
+          
+            }
         }
 
         private void btnSua_Click(object sender, EventArgs e)
         {
-            int maKH = Convert.ToInt32(txtMaKH.Text);
-            bllkh.Load_kh_update(maKH, txtTenKH.Text,txtEmail.Text, txtSDT.Text, txtDiaChi.Text, txtMatKhau.Text);
-            KhachHang_Load(sender,e);
-            MessageBox.Show("Sửa thành công!");
+            if (txtMaKH.Text == "")
+            {
+                MessageBox.Show("Vui lòng chọn nội dung cần cập nhật!");
+            }
+            else
+            {
+                int maKH = Convert.ToInt32(txtMaKH.Text);
+                bllkh.Load_kh_update(maKH, txtTenKH.Text, txtEmail.Text, txtSDT.Text, txtDiaChi.Text, txtMatKhau.Text);
+                KhachHang_Load(sender, e);
+                MessageBox.Show("Sửa thành công!");
+            }
         }
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -63,6 +77,11 @@ namespace Cinema
                 txtDiaChi.Text = row.Cells["DiaChi"].Value.ToString();
                 txtMatKhau.Text = row.Cells["MatKhau"].Value.ToString();
             }
+        }
+
+        private void KhachHang_Load_1(object sender, EventArgs e)
+        {
+
         }
     }
 }

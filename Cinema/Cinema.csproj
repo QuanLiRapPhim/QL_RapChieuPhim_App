@@ -134,6 +134,12 @@
     <Compile Include="ThemNguoiDungVaoNhom.Designer.cs">
       <DependentUpon>ThemNguoiDungVaoNhom.cs</DependentUpon>
     </Compile>
+    <Compile Include="Ve.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ve.Designer.cs">
+      <DependentUpon>Ve.cs</DependentUpon>
+    </Compile>
     <Compile Include="XuLiNhanVien.cs" />
     <EmbeddedResource Include="DangNhap.resx">
       <DependentUpon>DangNhap.cs</DependentUpon>
@@ -182,6 +188,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ThemNguoiDungVaoNhom.resx">
       <DependentUpon>ThemNguoiDungVaoNhom.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ve.resx">
+      <DependentUpon>Ve.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="DataSetCinema.xsc">
       <DependentUpon>DataSetCinema.xsd</DependentUpon>

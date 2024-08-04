@@ -111,7 +111,8 @@ namespace Cinema
 
         private void btnQLVe_Click_1(object sender, EventArgs e)
         {
-
+            Ve ve = new Ve();
+            ve.Show();
         }
     }
 }

@@ -41,17 +41,30 @@ namespace BLL
             // Kiểm tra nếu khuyến mãi tồn tại
             if (delKM != null)
             {
-                // Xóa khuyến mãi khỏi tập hợp KhuyenMais
-                cinema.KhuyenMais.DeleteOnSubmit(delKM);
+                // Kiểm tra xem khuyến mãi có đang được áp dụng không
+                bool isApplied = cinema.ApDungKhuyenMais.Any(adkm => adkm.MaKhuyenMai == maKM);
 
-                // Lưu thay đổi vào cơ sở dữ liệu
-                cinema.SubmitChanges();
+                if (isApplied)
+                {
+                    MessageBox.Show("Khuyến mãi đang được áp dụng và không thể xóa.");
+                }
+                else
+                {
+                    // Xóa khuyến mãi khỏi tập hợp KhuyenMais
+                    cinema.KhuyenMais.DeleteOnSubmit(delKM);
+
+                    // Lưu thay đổi vào cơ sở dữ liệu
+                    cinema.SubmitChanges();
+
+                    MessageBox.Show("Khuyến mãi đã được xóa thành công.");
+                }
             }
             else
             {
                 MessageBox.Show("Khuyến mãi không tồn tại.");
             }
         }
+
         public void UpdateKhuyenMai(int maKM, string tieuDe, string moTa, decimal giamGia, DateTime ngayBatDau, DateTime ngayKetThuc)
         {
             // Tìm khuyến mãi theo mã khuyến mãi

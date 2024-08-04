@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace BLL
 {
@@ -18,14 +19,38 @@ namespace BLL
         {
             return cinema.KhachHangs.Select(kh=>kh).ToList<KhachHang>();
         }
-        
-      
+
+
         public void Load_kh_delete(int makh)
         {
+            // Tìm khách hàng cần xóa
             KhachHang dm = cinema.KhachHangs.Where(kh => kh.MaKhachHang == makh).FirstOrDefault();
-            cinema.KhachHangs.DeleteOnSubmit(dm);
-            cinema.SubmitChanges();
+
+            if (dm == null)
+            {
+                MessageBox.Show("Khách hàng không tồn tại.");
+                return;
+            }
+
+            // Kiểm tra sự tồn tại trong các bảng liên quan
+            bool hasOrders = cinema.DonHangThucAns.Any(dh => dh.MaKhachHang == makh);
+            bool hasReviews = cinema.DanhGiaPhims.Any(dg => dg.MaKhachHang == makh);
+            bool hasVe = cinema.Ves.Any(ve => ve.MaKhachHang == makh);
+
+            if (hasOrders || hasReviews || hasVe)
+            {
+                MessageBox.Show("Không thể xóa khách hàng vì thông tin có liên quan đến Vé, Đánh giá phim hoặc Đơn hàng thức ăn");
+            }
+            else
+            {
+                // Xóa khách hàng khỏi tập hợp KhachHangs
+                cinema.KhachHangs.DeleteOnSubmit(dm);
+                cinema.SubmitChanges();
+
+                MessageBox.Show("Khách hàng đã được xóa thành công.");
+            }
         }
+
         public void Load_kh_update(int makh, string tenKhachHang, string email, string soDienThoai, string diaChi, string matKhau)
         {
             // Tìm khách hàng theo mã khách hàng
