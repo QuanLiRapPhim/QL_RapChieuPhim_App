@@ -26,19 +26,48 @@ namespace Cinema
 
         private void btnThem_Click(object sender, EventArgs e)
         {
-            TL_DAL.InsertTheLoai(txtTenTL.Text);
-            TheLoaiPhim_Load(sender, e);
-            LamTrongDuLieuNhap();
-            MessageBox.Show("Thêm thành công!");
+            // Kiểm tra nếu bất kỳ trường nào bị để trống
+            if (string.IsNullOrWhiteSpace(txtTenTL.Text))
+            {
+                MessageBox.Show("Vui lòng nhập tên thể loại!");
+            }
+            else
+            {
+                try
+                {
+                    // Thêm thể loại vào cơ sở dữ liệu
+                    TL_DAL.InsertTheLoai(txtTenTL.Text);
 
+                    // Tải lại dữ liệu thể loại phim và làm trống dữ liệu nhập
+                    TheLoaiPhim_Load(sender, e);
+                    LamTrongDuLieuNhap();
+
+                    // Hiển thị thông báo thêm thành công
+                    MessageBox.Show("Thêm thể loại thành công!");
+                }
+                catch (Exception ex)
+                {
+                    // Xử lý ngoại lệ chung và hiển thị thông báo lỗi
+                    MessageBox.Show("Đã xảy ra lỗi: " + ex.Message);
+                }
+            }
         }
+
 
         private void btnSua_Click(object sender, EventArgs e)
         {
-            TL_DAL.UpdateTheLoai(int.Parse(txtMaTL.Text),txtTenTL.Text);
-            TheLoaiPhim_Load(sender, e);
-            LamTrongDuLieuNhap();
-            MessageBox.Show("Sửa thành công!");
+
+            if (txtMaTL.Text == "")
+            {
+                MessageBox.Show("Vui lòng chọn nội dung cần xóa!");
+            }
+            else
+            {
+                TL_DAL.UpdateTheLoai(int.Parse(txtMaTL.Text), txtTenTL.Text);
+                TheLoaiPhim_Load(sender, e);
+                LamTrongDuLieuNhap();
+                MessageBox.Show("Sửa thành công!");
+            }
         }
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -54,10 +83,17 @@ namespace Cinema
 
         private void btnXoa_Click(object sender, EventArgs e)
         {
-            TL_DAL.DeleteTheLoai(int.Parse(txtMaTL.Text));
-            TheLoaiPhim_Load(sender,e);
-            LamTrongDuLieuNhap();
-
+            //
+            if (txtTenTL.Text == "")
+            {
+                MessageBox.Show("Vui lòng chọn nội dung cần xóa!");
+            }
+            else
+            {
+                TL_DAL.DeleteTheLoai(int.Parse(txtMaTL.Text));
+                TheLoaiPhim_Load(sender, e);
+                LamTrongDuLieuNhap();
+            }
           
         }
 
