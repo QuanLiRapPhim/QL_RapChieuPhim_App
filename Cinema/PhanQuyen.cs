@@ -72,11 +72,13 @@ namespace Cinema
                 int? pKC=phanQuyenTableAdapter.KTKC(manhomnd, mmh);
                 if(pKC.Value==0) 
                 {
-                    phanQuyenTableAdapter.Them(manhomnd,mmh,true);
+                    phanQuyenTableAdapter.Them(manhomnd,mmh,false);
+                    MessageBox.Show("them");
                 }
                 else
                 {
-                    phanQuyenTableAdapter.Sua(false,manhomnd,mmh);
+                    phanQuyenTableAdapter.Sua(true,manhomnd,mmh);
+                    MessageBox.Show("sua");
                 }
             }
             
