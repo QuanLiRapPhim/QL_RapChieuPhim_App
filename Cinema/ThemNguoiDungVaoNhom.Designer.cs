@@ -37,14 +37,6 @@
             this.cboNhomNguoiDung = new System.Windows.Forms.ComboBox();
             this.nhanVienBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dgvNhanVien = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nguoiDungNhomNguoiDung_DKBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.nguoiDungNhomNguoiDung_DKTableAdapter = new Cinema.DataSetCinemaTableAdapters.NguoiDungNhomNguoiDung_DKTableAdapter();
             this.fill_DKToolStrip = new System.Windows.Forms.ToolStrip();
@@ -58,6 +50,9 @@
             this.btnLoaiKhoiNhom = new System.Windows.Forms.Button();
             this.nguoiDungNhomNguoiDungBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.nguoiDungNhomNguoiDungTableAdapter = new Cinema.DataSetCinemaTableAdapters.NguoiDungNhomNguoiDungTableAdapter();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataSetCinema)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nhomNguoiDungBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nhanVienBindingSource)).BeginInit();
@@ -117,7 +112,7 @@
             this.cboNhomNguoiDung.DataSource = this.nhomNguoiDungBindingSource;
             this.cboNhomNguoiDung.DisplayMember = "TenNhom";
             this.cboNhomNguoiDung.FormattingEnabled = true;
-            this.cboNhomNguoiDung.Location = new System.Drawing.Point(400, 112);
+            this.cboNhomNguoiDung.Location = new System.Drawing.Point(704, 136);
             this.cboNhomNguoiDung.Name = "cboNhomNguoiDung";
             this.cboNhomNguoiDung.Size = new System.Drawing.Size(300, 28);
             this.cboNhomNguoiDung.TabIndex = 1;
@@ -136,19 +131,116 @@
             this.dgvNhanVien.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn1,
             this.dataGridViewTextBoxColumn2,
-            this.dataGridViewTextBoxColumn3,
-            this.dataGridViewTextBoxColumn4,
-            this.dataGridViewTextBoxColumn5,
-            this.dataGridViewTextBoxColumn6,
-            this.dataGridViewTextBoxColumn7,
-            this.dataGridViewTextBoxColumn8});
+            this.dataGridViewTextBoxColumn3});
             this.dgvNhanVien.DataSource = this.nhanVienBindingSource;
-            this.dgvNhanVien.Location = new System.Drawing.Point(43, 191);
+            this.dgvNhanVien.Location = new System.Drawing.Point(12, 191);
             this.dgvNhanVien.Name = "dgvNhanVien";
             this.dgvNhanVien.RowHeadersWidth = 62;
             this.dgvNhanVien.RowTemplate.Height = 28;
-            this.dgvNhanVien.Size = new System.Drawing.Size(326, 321);
+            this.dgvNhanVien.Size = new System.Drawing.Size(525, 321);
             this.dgvNhanVien.TabIndex = 1;
+            // 
+            // nguoiDungNhomNguoiDung_DKBindingSource
+            // 
+            this.nguoiDungNhomNguoiDung_DKBindingSource.DataMember = "NguoiDungNhomNguoiDung_DK";
+            this.nguoiDungNhomNguoiDung_DKBindingSource.DataSource = this.dataSetCinema;
+            // 
+            // nguoiDungNhomNguoiDung_DKTableAdapter
+            // 
+            this.nguoiDungNhomNguoiDung_DKTableAdapter.ClearBeforeFill = true;
+            // 
+            // fill_DKToolStrip
+            // 
+            this.fill_DKToolStrip.ImageScalingSize = new System.Drawing.Size(24, 24);
+            this.fill_DKToolStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.maNhomNguoiDungToolStripLabel,
+            this.maNhomNguoiDungToolStripTextBox,
+            this.fill_DKToolStripButton});
+            this.fill_DKToolStrip.Location = new System.Drawing.Point(0, 0);
+            this.fill_DKToolStrip.Name = "fill_DKToolStrip";
+            this.fill_DKToolStrip.Size = new System.Drawing.Size(1140, 34);
+            this.fill_DKToolStrip.TabIndex = 2;
+            this.fill_DKToolStrip.Text = "fill_DKToolStrip";
+            // 
+            // maNhomNguoiDungToolStripLabel
+            // 
+            this.maNhomNguoiDungToolStripLabel.Name = "maNhomNguoiDungToolStripLabel";
+            this.maNhomNguoiDungToolStripLabel.Size = new System.Drawing.Size(184, 29);
+            this.maNhomNguoiDungToolStripLabel.Text = "MaNhomNguoiDung:";
+            // 
+            // maNhomNguoiDungToolStripTextBox
+            // 
+            this.maNhomNguoiDungToolStripTextBox.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.maNhomNguoiDungToolStripTextBox.Name = "maNhomNguoiDungToolStripTextBox";
+            this.maNhomNguoiDungToolStripTextBox.Size = new System.Drawing.Size(100, 34);
+            // 
+            // fill_DKToolStripButton
+            // 
+            this.fill_DKToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.fill_DKToolStripButton.Name = "fill_DKToolStripButton";
+            this.fill_DKToolStripButton.Size = new System.Drawing.Size(67, 29);
+            this.fill_DKToolStripButton.Text = "Fill_DK";
+            this.fill_DKToolStripButton.Click += new System.EventHandler(this.fill_DKToolStripButton_Click);
+            // 
+            // dgv_NhomNguoiDung
+            // 
+            this.dgv_NhomNguoiDung.AutoGenerateColumns = false;
+            this.dgv_NhomNguoiDung.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_NhomNguoiDung.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn9,
+            this.dataGridViewTextBoxColumn10});
+            this.dgv_NhomNguoiDung.DataSource = this.nguoiDungNhomNguoiDung_DKBindingSource;
+            this.dgv_NhomNguoiDung.Location = new System.Drawing.Point(704, 191);
+            this.dgv_NhomNguoiDung.Name = "dgv_NhomNguoiDung";
+            this.dgv_NhomNguoiDung.RowHeadersWidth = 62;
+            this.dgv_NhomNguoiDung.RowTemplate.Height = 28;
+            this.dgv_NhomNguoiDung.Size = new System.Drawing.Size(424, 321);
+            this.dgv_NhomNguoiDung.TabIndex = 3;
+            // 
+            // dataGridViewTextBoxColumn9
+            // 
+            this.dataGridViewTextBoxColumn9.DataPropertyName = "MaNhanVien";
+            this.dataGridViewTextBoxColumn9.HeaderText = "MaNhanVien";
+            this.dataGridViewTextBoxColumn9.MinimumWidth = 8;
+            this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
+            this.dataGridViewTextBoxColumn9.Width = 150;
+            // 
+            // dataGridViewTextBoxColumn10
+            // 
+            this.dataGridViewTextBoxColumn10.DataPropertyName = "MaNhomNguoiDung";
+            this.dataGridViewTextBoxColumn10.HeaderText = "MaNhomNguoiDung";
+            this.dataGridViewTextBoxColumn10.MinimumWidth = 8;
+            this.dataGridViewTextBoxColumn10.Name = "dataGridViewTextBoxColumn10";
+            this.dataGridViewTextBoxColumn10.Width = 150;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(578, 270);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(100, 35);
+            this.button1.TabIndex = 4;
+            this.button1.Text = ">>>";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // btnLoaiKhoiNhom
+            // 
+            this.btnLoaiKhoiNhom.Location = new System.Drawing.Point(578, 371);
+            this.btnLoaiKhoiNhom.Name = "btnLoaiKhoiNhom";
+            this.btnLoaiKhoiNhom.Size = new System.Drawing.Size(100, 35);
+            this.btnLoaiKhoiNhom.TabIndex = 5;
+            this.btnLoaiKhoiNhom.Text = "<<<";
+            this.btnLoaiKhoiNhom.UseVisualStyleBackColor = true;
+            this.btnLoaiKhoiNhom.Click += new System.EventHandler(this.btnLoaiKhoiNhom_Click);
+            // 
+            // nguoiDungNhomNguoiDungBindingSource
+            // 
+            this.nguoiDungNhomNguoiDungBindingSource.DataMember = "NguoiDungNhomNguoiDung";
+            this.nguoiDungNhomNguoiDungBindingSource.DataSource = this.dataSetCinema;
+            // 
+            // nguoiDungNhomNguoiDungTableAdapter
+            // 
+            this.nguoiDungNhomNguoiDungTableAdapter.ClearBeforeFill = true;
             // 
             // dataGridViewTextBoxColumn1
             // 
@@ -175,153 +267,12 @@
             this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
             this.dataGridViewTextBoxColumn3.Width = 150;
             // 
-            // dataGridViewTextBoxColumn4
-            // 
-            this.dataGridViewTextBoxColumn4.DataPropertyName = "Luong";
-            this.dataGridViewTextBoxColumn4.HeaderText = "Luong";
-            this.dataGridViewTextBoxColumn4.MinimumWidth = 8;
-            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
-            this.dataGridViewTextBoxColumn4.Width = 150;
-            // 
-            // dataGridViewTextBoxColumn5
-            // 
-            this.dataGridViewTextBoxColumn5.DataPropertyName = "NgayTuyenDung";
-            this.dataGridViewTextBoxColumn5.HeaderText = "NgayTuyenDung";
-            this.dataGridViewTextBoxColumn5.MinimumWidth = 8;
-            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
-            this.dataGridViewTextBoxColumn5.Width = 150;
-            // 
-            // dataGridViewTextBoxColumn6
-            // 
-            this.dataGridViewTextBoxColumn6.DataPropertyName = "TenDangNhap";
-            this.dataGridViewTextBoxColumn6.HeaderText = "TenDangNhap";
-            this.dataGridViewTextBoxColumn6.MinimumWidth = 8;
-            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
-            this.dataGridViewTextBoxColumn6.Width = 150;
-            // 
-            // dataGridViewTextBoxColumn7
-            // 
-            this.dataGridViewTextBoxColumn7.DataPropertyName = "MatKhau";
-            this.dataGridViewTextBoxColumn7.HeaderText = "MatKhau";
-            this.dataGridViewTextBoxColumn7.MinimumWidth = 8;
-            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
-            this.dataGridViewTextBoxColumn7.Width = 150;
-            // 
-            // dataGridViewTextBoxColumn8
-            // 
-            this.dataGridViewTextBoxColumn8.DataPropertyName = "MaRap";
-            this.dataGridViewTextBoxColumn8.HeaderText = "MaRap";
-            this.dataGridViewTextBoxColumn8.MinimumWidth = 8;
-            this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
-            this.dataGridViewTextBoxColumn8.Width = 150;
-            // 
-            // nguoiDungNhomNguoiDung_DKBindingSource
-            // 
-            this.nguoiDungNhomNguoiDung_DKBindingSource.DataMember = "NguoiDungNhomNguoiDung_DK";
-            this.nguoiDungNhomNguoiDung_DKBindingSource.DataSource = this.dataSetCinema;
-            // 
-            // nguoiDungNhomNguoiDung_DKTableAdapter
-            // 
-            this.nguoiDungNhomNguoiDung_DKTableAdapter.ClearBeforeFill = true;
-            // 
-            // fill_DKToolStrip
-            // 
-            this.fill_DKToolStrip.ImageScalingSize = new System.Drawing.Size(24, 24);
-            this.fill_DKToolStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.maNhomNguoiDungToolStripLabel,
-            this.maNhomNguoiDungToolStripTextBox,
-            this.fill_DKToolStripButton});
-            this.fill_DKToolStrip.Location = new System.Drawing.Point(0, 0);
-            this.fill_DKToolStrip.Name = "fill_DKToolStrip";
-            this.fill_DKToolStrip.Size = new System.Drawing.Size(1042, 38);
-            this.fill_DKToolStrip.TabIndex = 2;
-            this.fill_DKToolStrip.Text = "fill_DKToolStrip";
-            // 
-            // maNhomNguoiDungToolStripLabel
-            // 
-            this.maNhomNguoiDungToolStripLabel.Name = "maNhomNguoiDungToolStripLabel";
-            this.maNhomNguoiDungToolStripLabel.Size = new System.Drawing.Size(184, 33);
-            this.maNhomNguoiDungToolStripLabel.Text = "MaNhomNguoiDung:";
-            // 
-            // maNhomNguoiDungToolStripTextBox
-            // 
-            this.maNhomNguoiDungToolStripTextBox.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.maNhomNguoiDungToolStripTextBox.Name = "maNhomNguoiDungToolStripTextBox";
-            this.maNhomNguoiDungToolStripTextBox.Size = new System.Drawing.Size(100, 38);
-            // 
-            // fill_DKToolStripButton
-            // 
-            this.fill_DKToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
-            this.fill_DKToolStripButton.Name = "fill_DKToolStripButton";
-            this.fill_DKToolStripButton.Size = new System.Drawing.Size(67, 33);
-            this.fill_DKToolStripButton.Text = "Fill_DK";
-            this.fill_DKToolStripButton.Click += new System.EventHandler(this.fill_DKToolStripButton_Click);
-            // 
-            // dgv_NhomNguoiDung
-            // 
-            this.dgv_NhomNguoiDung.AutoGenerateColumns = false;
-            this.dgv_NhomNguoiDung.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv_NhomNguoiDung.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn9,
-            this.dataGridViewTextBoxColumn10});
-            this.dgv_NhomNguoiDung.DataSource = this.nguoiDungNhomNguoiDung_DKBindingSource;
-            this.dgv_NhomNguoiDung.Location = new System.Drawing.Point(519, 191);
-            this.dgv_NhomNguoiDung.Name = "dgv_NhomNguoiDung";
-            this.dgv_NhomNguoiDung.RowHeadersWidth = 62;
-            this.dgv_NhomNguoiDung.RowTemplate.Height = 28;
-            this.dgv_NhomNguoiDung.Size = new System.Drawing.Size(485, 321);
-            this.dgv_NhomNguoiDung.TabIndex = 3;
-            // 
-            // dataGridViewTextBoxColumn9
-            // 
-            this.dataGridViewTextBoxColumn9.DataPropertyName = "MaNhanVien";
-            this.dataGridViewTextBoxColumn9.HeaderText = "MaNhanVien";
-            this.dataGridViewTextBoxColumn9.MinimumWidth = 8;
-            this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
-            this.dataGridViewTextBoxColumn9.Width = 150;
-            // 
-            // dataGridViewTextBoxColumn10
-            // 
-            this.dataGridViewTextBoxColumn10.DataPropertyName = "MaNhomNguoiDung";
-            this.dataGridViewTextBoxColumn10.HeaderText = "MaNhomNguoiDung";
-            this.dataGridViewTextBoxColumn10.MinimumWidth = 8;
-            this.dataGridViewTextBoxColumn10.Name = "dataGridViewTextBoxColumn10";
-            this.dataGridViewTextBoxColumn10.Width = 150;
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(386, 263);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(100, 35);
-            this.button1.TabIndex = 4;
-            this.button1.Text = ">>>";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // btnLoaiKhoiNhom
-            // 
-            this.btnLoaiKhoiNhom.Location = new System.Drawing.Point(386, 352);
-            this.btnLoaiKhoiNhom.Name = "btnLoaiKhoiNhom";
-            this.btnLoaiKhoiNhom.Size = new System.Drawing.Size(100, 35);
-            this.btnLoaiKhoiNhom.TabIndex = 5;
-            this.btnLoaiKhoiNhom.Text = "<<<";
-            this.btnLoaiKhoiNhom.UseVisualStyleBackColor = true;
-            this.btnLoaiKhoiNhom.Click += new System.EventHandler(this.btnLoaiKhoiNhom_Click);
-            // 
-            // nguoiDungNhomNguoiDungBindingSource
-            // 
-            this.nguoiDungNhomNguoiDungBindingSource.DataMember = "NguoiDungNhomNguoiDung";
-            this.nguoiDungNhomNguoiDungBindingSource.DataSource = this.dataSetCinema;
-            // 
-            // nguoiDungNhomNguoiDungTableAdapter
-            // 
-            this.nguoiDungNhomNguoiDungTableAdapter.ClearBeforeFill = true;
-            // 
             // btnThemVaoNhom
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1042, 563);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(206)))), ((int)(((byte)(104)))));
+            this.ClientSize = new System.Drawing.Size(1140, 603);
             this.Controls.Add(this.btnLoaiKhoiNhom);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.dgv_NhomNguoiDung);
@@ -355,14 +306,6 @@
         private DataSetCinemaTableAdapters.NhanVienTableAdapter nhanVienTableAdapter;
         private System.Windows.Forms.BindingSource nhanVienBindingSource;
         private System.Windows.Forms.DataGridView dgvNhanVien;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
         private System.Windows.Forms.BindingSource nguoiDungNhomNguoiDung_DKBindingSource;
         private DataSetCinemaTableAdapters.NguoiDungNhomNguoiDung_DKTableAdapter nguoiDungNhomNguoiDung_DKTableAdapter;
         private System.Windows.Forms.ToolStrip fill_DKToolStrip;
@@ -376,5 +319,8 @@
         private System.Windows.Forms.Button btnLoaiKhoiNhom;
         private System.Windows.Forms.BindingSource nguoiDungNhomNguoiDungBindingSource;
         private DataSetCinemaTableAdapters.NguoiDungNhomNguoiDungTableAdapter nguoiDungNhomNguoiDungTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
     }
 }

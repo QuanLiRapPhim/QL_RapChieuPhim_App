@@ -13,6 +13,7 @@ namespace Cinema
 {
     public partial class Form1 : Form
     {
+
         XuLiNhanVien NguoiDung=new XuLiNhanVien();
   
         string _TenDangNhap;
@@ -25,7 +26,8 @@ namespace Cinema
         {
             InitializeComponent();
             this.Load += Form1_Load;
-            
+      
+           // this.btnQLNhanVien.Enabled = false;
         }
 
         private void Form1_Load(object sender, EventArgs e)

@@ -53,33 +53,40 @@ namespace Cinema
         }
         public void ProcessLogin()
         {
-            //LoginResult result;
-            int result = CauHinh.Check_User(txtTaiKhoan.Text, txtMatKhau.Text);
+            var (result, userGroup) = CauHinh.Check_User(txtTaiKhoan.Text, txtMatKhau.Text);
 
-            //Check_User viết trong Class QL_NguoiDung
-            // Wrong username or pass
             if (result == 100)
             {
-                MessageBox.Show("Sai " + lblTaiKhoan.Text + " Hoặc " +
-                lblMatKhau.Text);
+                MessageBox.Show("Sai " + lblTaiKhoan.Text + " Hoặc " + lblMatKhau.Text);
                 return;
             }
-            // Account had been disabled
             else if (result == 200)
             {
                 MessageBox.Show("Tài khoản bị khóa");
                 return;
             }
+
             if (Program.frm_mainForm == null || Program.frm_mainForm.IsDisposed)
             {
-                Program.frm_mainForm = new Form1();
-                Program.frm_mainForm.TenDangNhap = txtTaiKhoan.Text;
+
+                // Set GroupBox1 visibility based on user group
+                if (userGroup == 1)
+                {
+                   // Program.frm_mainForm.
+                   QuanLi quanLi = new QuanLi();
+                    quanLi.Show();
+                }
+                else if (userGroup == 2)
+                {
+                   // Program.frm_mainForm.GroupBox1.Visible = false;
+                   Form1 form1 = new Form1();
+                    form1.Show();   
+                }
             }
- 
-            
-            Program.frm_mainForm.Show();
-            
+
+
         }
+
 
         private void button2_Click(object sender, EventArgs e)
         {

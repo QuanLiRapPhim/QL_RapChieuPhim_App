@@ -197,6 +197,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(206)))), ((int)(((byte)(104)))));
             this.ClientSize = new System.Drawing.Size(1307, 548);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.pQ_DKDataGridView);

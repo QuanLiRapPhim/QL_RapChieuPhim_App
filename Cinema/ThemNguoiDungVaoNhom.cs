@@ -69,8 +69,6 @@ namespace Cinema
             // Chuyển đổi giá trị từ ComboBox sang int
             int MaNhomND = int.Parse(cboNhomNguoiDung.SelectedValue.ToString());
             this.nguoiDungNhomNguoiDung_DKTableAdapter.Insert(TenDN, MaNhomND);
-          
-
             MessageBox.Show("Thành công!!");
         }
 
