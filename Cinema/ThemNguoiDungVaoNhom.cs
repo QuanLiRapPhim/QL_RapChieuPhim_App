@@ -1,4 +1,5 @@
 ﻿using Cinema.DataSetCinemaTableAdapters;
+using DTO;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -54,13 +55,18 @@ namespace Cinema
         {
             try
             {
-                this.nguoiDungNhomNguoiDung_DKTableAdapter.Fill_DK(this.dataSetCinema.NguoiDungNhomNguoiDung_DK, new System.Nullable<int>(((int)(System.Convert.ChangeType(cboNhomNguoiDung.SelectedValue.ToString(), typeof(int))))));
+                if (cboNhomNguoiDung.SelectedValue != null)
+                {
+                    int selectedValue = Convert.ToInt32(cboNhomNguoiDung.SelectedValue);
+                    this.nguoiDungNhomNguoiDung_DKTableAdapter.Fill_DK(this.dataSetCinema.NguoiDungNhomNguoiDung_DK, selectedValue);
+                }
             }
-            catch (System.Exception ex)
+            catch (Exception ex)
             {
-                System.Windows.Forms.MessageBox.Show(ex.Message);
+                MessageBox.Show("Đã xảy ra lỗi: " + ex.Message);
             }
         }
+
 
         private void button1_Click(object sender, EventArgs e)
         {
@@ -69,25 +75,37 @@ namespace Cinema
             // Chuyển đổi giá trị từ ComboBox sang int
             int MaNhomND = int.Parse(cboNhomNguoiDung.SelectedValue.ToString());
             this.nguoiDungNhomNguoiDung_DKTableAdapter.Insert(TenDN, MaNhomND);
+            LoadComboByCondition();
             MessageBox.Show("Thành công!!");
+            
         }
 
         private void btnLoaiKhoiNhom_Click(object sender, EventArgs e)
         {
-            //foreach (DataGridViewRow item in dgv_NhomNguoiDung.SelectedRows)
-            //{
-            //    // Giả sử Delete chỉ chấp nhận hai đối số
-            //    if
-            //    (this.nguoiDungNhomNguoiDung_DKTableAdapter.del(item.Cells[0].Value.ToString(), cboNhomNguoiDung.SelectedValue.ToString()))
-            //    {
-            //        MessageBox.Show("Thành công");
-            //    }
-            //    else
-            //    {
-            //        MessageBox.Show("Thất bại");
-            //    }
-            //    //LoadComboByCondition();
-            //}
+           
+                int maNguoiDung = int.Parse(dgv_NhomNguoiDung.CurrentRow.Cells[0].Value.ToString());
+
+                // Chuyển đổi giá trị từ ComboBox sang int
+                int maNhomNguoiDung = int.Parse(dgv_NhomNguoiDung.CurrentRow.Cells[1].Value.ToString());
+            // Giả sử Delete chỉ chấp nhận hai đối số
+            int result = this.nguoiDungNhomNguoiDung_DKTableAdapter.Delete1(maNguoiDung,maNhomNguoiDung);
+
+                if(result>0)
+                {
+                    MessageBox.Show("Thành công");
+                }
+                else
+                {
+                    MessageBox.Show("Thất bại");
+                }
+                LoadComboByCondition();
+            
+        }
+        public void LoadComboByCondition()
+        {
+            int selectedValue = Convert.ToInt32(cboNhomNguoiDung.SelectedValue);
+            this.nguoiDungNhomNguoiDung_DKTableAdapter.Fill_DK(this.dataSetCinema.NguoiDungNhomNguoiDung_DK, selectedValue);
+
         }
     }
 }

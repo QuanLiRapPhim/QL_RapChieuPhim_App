@@ -10,9 +10,12 @@
     }
 }
 
-namespace Cinema.DataSetCinemaTableAdapters {
-    
-    
+namespace Cinema.DataSetCinemaTableAdapters
+{
+    partial class NguoiDungNhomNguoiDung_DKTableAdapter
+    {
+    }
+
     public partial class Get_PhanQuyenTableAdapter {
     }
 }
