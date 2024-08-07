@@ -45,7 +45,6 @@
             this.datNgayDat = new System.Windows.Forms.DateTimePicker();
             this.label8 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.btnThoat = new System.Windows.Forms.Button();
             this.btnXoa = new System.Windows.Forms.Button();
             this.btnSua = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -192,25 +191,14 @@
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.White;
-            this.groupBox1.Controls.Add(this.btnThoat);
             this.groupBox1.Controls.Add(this.btnXoa);
             this.groupBox1.Controls.Add(this.btnSua);
             this.groupBox1.Location = new System.Drawing.Point(728, 133);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(336, 136);
+            this.groupBox1.Size = new System.Drawing.Size(336, 93);
             this.groupBox1.TabIndex = 14;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Chỉnh sửa thông tin";
-            // 
-            // btnThoat
-            // 
-            this.btnThoat.Location = new System.Drawing.Point(181, 87);
-            this.btnThoat.Name = "btnThoat";
-            this.btnThoat.Size = new System.Drawing.Size(100, 30);
-            this.btnThoat.TabIndex = 2;
-            this.btnThoat.Text = "Thoát";
-            this.btnThoat.UseVisualStyleBackColor = true;
-            this.btnThoat.Click += new System.EventHandler(this.btnThoat_Click);
             // 
             // btnXoa
             // 
@@ -243,7 +231,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(879, 276);
+            this.button1.Location = new System.Drawing.Point(879, 261);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(185, 50);
             this.button1.TabIndex = 16;
@@ -277,6 +265,7 @@
             this.Controls.Add(this.label1);
             this.ForeColor = System.Drawing.Color.Black;
             this.Name = "Ve";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Ve";
             this.Load += new System.EventHandler(this.Ve_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
@@ -307,7 +296,6 @@
         private System.Windows.Forms.DateTimePicker datNgayDat;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Button btnThoat;
         private System.Windows.Forms.Button btnXoa;
         private System.Windows.Forms.Button btnSua;
         private System.Windows.Forms.Panel panel1;
