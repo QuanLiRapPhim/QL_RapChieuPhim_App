@@ -34,21 +34,7 @@ namespace Cinema
                 return;
             }
             ProcessLogin();
-            //int kq = CauHinh.Check_Config(); //hàm Check_Config() thuộc Class QL_NguoiDung
-            //if (CauHinh.Check_Config() == 0)
-            //{
-            //    ProcessLogin();// Cấu hình phù hợp xử lý đăng nhập
-            //}
-            //if (CauHinh.Check_Config() == 1)
-            //{
-            //    MessageBox.Show("Chuỗi cấu hình không tồn tại");// Xử lý cấu hình
-            //    //ProcessConfig();
-            //}
-            //if (CauHinh.Check_Config() == 2)
-            //{
-            //    MessageBox.Show("Chuỗi cấu hình không phù hợp");// Xử lý cấu hình
-            //    //ProcessConfig();
-            //}
+          
            
         }
         public void ProcessLogin()
@@ -91,6 +77,14 @@ namespace Cinema
         private void button2_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void DangNhap_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (MessageBox.Show("Bạn có chắc chắn muốn đóng form?", "Xác nhận", MessageBoxButtons.YesNo) == DialogResult.No)
+            {
+                e.Cancel = true; // Ngăn form đóng
+            }
         }
     }
 }

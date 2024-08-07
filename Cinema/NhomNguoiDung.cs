@@ -19,9 +19,18 @@ namespace Cinema
 
         private void nhomNguoiDungBindingNavigatorSaveItem_Click(object sender, EventArgs e)
         {
-            this.Validate();
-            this.nhomNguoiDungBindingSource.EndEdit();
-            this.tableAdapterManager.UpdateAll(this.dataSetCinema);
+            try
+            {
+                this.Validate();
+                this.nhomNguoiDungBindingSource.EndEdit();
+                this.tableAdapterManager.UpdateAll(this.dataSetCinema);
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show("Lỗi không thể sửa!");
+                NhomNguoiDung_Load(sender, e);
+            }
+            
 
         }
 

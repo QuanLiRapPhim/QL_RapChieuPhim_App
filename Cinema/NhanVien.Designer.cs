@@ -92,27 +92,27 @@
             maNhanVienLabel.AutoSize = true;
             maNhanVienLabel.Location = new System.Drawing.Point(303, 52);
             maNhanVienLabel.Name = "maNhanVienLabel";
-            maNhanVienLabel.Size = new System.Drawing.Size(113, 20);
+            maNhanVienLabel.Size = new System.Drawing.Size(107, 20);
             maNhanVienLabel.TabIndex = 2;
-            maNhanVienLabel.Text = "Ma Nhan Vien:";
+            maNhanVienLabel.Text = "Mã nhân viên:";
             // 
             // tenNhanVienLabel
             // 
             tenNhanVienLabel.AutoSize = true;
             tenNhanVienLabel.Location = new System.Drawing.Point(303, 84);
             tenNhanVienLabel.Name = "tenNhanVienLabel";
-            tenNhanVienLabel.Size = new System.Drawing.Size(118, 20);
+            tenNhanVienLabel.Size = new System.Drawing.Size(112, 20);
             tenNhanVienLabel.TabIndex = 4;
-            tenNhanVienLabel.Text = "Ten Nhan Vien:";
+            tenNhanVienLabel.Text = "Tên nhân viên:";
             // 
             // chucVuLabel
             // 
             chucVuLabel.AutoSize = true;
             chucVuLabel.Location = new System.Drawing.Point(303, 116);
             chucVuLabel.Name = "chucVuLabel";
-            chucVuLabel.Size = new System.Drawing.Size(74, 20);
+            chucVuLabel.Size = new System.Drawing.Size(70, 20);
             chucVuLabel.TabIndex = 6;
-            chucVuLabel.Text = "Chuc Vu:";
+            chucVuLabel.Text = "Chức vụ:";
             // 
             // luongLabel
             // 
@@ -121,43 +121,43 @@
             luongLabel.Name = "luongLabel";
             luongLabel.Size = new System.Drawing.Size(58, 20);
             luongLabel.TabIndex = 8;
-            luongLabel.Text = "Luong:";
+            luongLabel.Text = "Lương:";
             // 
             // ngayTuyenDungLabel
             // 
             ngayTuyenDungLabel.AutoSize = true;
             ngayTuyenDungLabel.Location = new System.Drawing.Point(303, 181);
             ngayTuyenDungLabel.Name = "ngayTuyenDungLabel";
-            ngayTuyenDungLabel.Size = new System.Drawing.Size(139, 20);
+            ngayTuyenDungLabel.Size = new System.Drawing.Size(132, 20);
             ngayTuyenDungLabel.TabIndex = 10;
-            ngayTuyenDungLabel.Text = "Ngay Tuyen Dung:";
+            ngayTuyenDungLabel.Text = "Ngày tuyển dụng:";
             // 
             // tenDangNhapLabel
             // 
             tenDangNhapLabel.AutoSize = true;
             tenDangNhapLabel.Location = new System.Drawing.Point(303, 212);
             tenDangNhapLabel.Name = "tenDangNhapLabel";
-            tenDangNhapLabel.Size = new System.Drawing.Size(125, 20);
+            tenDangNhapLabel.Size = new System.Drawing.Size(120, 20);
             tenDangNhapLabel.TabIndex = 12;
-            tenDangNhapLabel.Text = "Ten Dang Nhap:";
+            tenDangNhapLabel.Text = "Tên đăng nhập:";
             // 
             // matKhauLabel
             // 
             matKhauLabel.AutoSize = true;
             matKhauLabel.Location = new System.Drawing.Point(303, 244);
             matKhauLabel.Name = "matKhauLabel";
-            matKhauLabel.Size = new System.Drawing.Size(81, 20);
+            matKhauLabel.Size = new System.Drawing.Size(79, 20);
             matKhauLabel.TabIndex = 14;
-            matKhauLabel.Text = "Mat Khau:";
+            matKhauLabel.Text = "Mật khẩu:";
             // 
             // maRapLabel
             // 
             maRapLabel.AutoSize = true;
             maRapLabel.Location = new System.Drawing.Point(308, 274);
             maRapLabel.Name = "maRapLabel";
-            maRapLabel.Size = new System.Drawing.Size(69, 20);
+            maRapLabel.Size = new System.Drawing.Size(62, 20);
             maRapLabel.TabIndex = 16;
-            maRapLabel.Text = "Ma Rap:";
+            maRapLabel.Text = "Mã rạp:";
             // 
             // dataSetCinema
             // 
@@ -226,7 +226,7 @@
             this.nhanVienBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
             this.nhanVienBindingNavigator.Name = "nhanVienBindingNavigator";
             this.nhanVienBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
-            this.nhanVienBindingNavigator.Size = new System.Drawing.Size(1305, 33);
+            this.nhanVienBindingNavigator.Size = new System.Drawing.Size(1305, 38);
             this.nhanVienBindingNavigator.TabIndex = 0;
             this.nhanVienBindingNavigator.Text = "bindingNavigator1";
             // 
@@ -236,7 +236,7 @@
             this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
             this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
             this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(34, 28);
+            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(34, 33);
             this.bindingNavigatorAddNewItem.Text = "Add new";
             // 
             // bindingNavigatorCountItem
@@ -500,6 +500,7 @@
             this.Controls.Add(this.nhanVienDataGridView);
             this.Controls.Add(this.nhanVienBindingNavigator);
             this.Name = "NhanVien";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "NhanVien";
             this.Load += new System.EventHandler(this.NhanVien_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataSetCinema)).EndInit();

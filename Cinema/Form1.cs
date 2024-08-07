@@ -98,10 +98,7 @@ namespace Cinema
 
         private void Form1_FormClosing(object sender, FormClosingEventArgs e)
         {
-            if (MessageBox.Show("Bạn có chắc chắn muốn đóng form?", "Xác nhận", MessageBoxButtons.YesNo) == DialogResult.No)
-            {
-                e.Cancel = true; // Ngăn form đóng
-            }
+           
            
         }
 

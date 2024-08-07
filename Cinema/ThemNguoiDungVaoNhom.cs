@@ -82,15 +82,16 @@ namespace Cinema
 
         private void btnLoaiKhoiNhom_Click(object sender, EventArgs e)
         {
-           
+            try
+            {
                 int maNguoiDung = int.Parse(dgv_NhomNguoiDung.CurrentRow.Cells[0].Value.ToString());
 
                 // Chuyển đổi giá trị từ ComboBox sang int
                 int maNhomNguoiDung = int.Parse(dgv_NhomNguoiDung.CurrentRow.Cells[1].Value.ToString());
-            // Giả sử Delete chỉ chấp nhận hai đối số
-            int result = this.nguoiDungNhomNguoiDung_DKTableAdapter.Delete1(maNguoiDung,maNhomNguoiDung);
+                // Giả sử Delete chỉ chấp nhận hai đối số
+                int result = this.nguoiDungNhomNguoiDung_DKTableAdapter.Delete1(maNguoiDung, maNhomNguoiDung);
 
-                if(result>0)
+                if (result > 0)
                 {
                     MessageBox.Show("Thành công");
                 }
@@ -99,6 +100,12 @@ namespace Cinema
                     MessageBox.Show("Thất bại");
                 }
                 LoadComboByCondition();
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show("Lỗi không thể lưu thay đổi này");
+            }
+               
             
         }
         public void LoadComboByCondition()

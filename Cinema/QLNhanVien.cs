@@ -25,25 +25,30 @@ namespace Cinema
 
         private void nhómNgườiDùngToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void thêmNgườiDùngVàoNhómToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            btnThemVaoNhom frm=new btnThemVaoNhom();
-            frm.Show();
-        }
-
-        private void quảnLíNhómNgườiDùngToolStripMenuItem_Click(object sender, EventArgs e)
-        {
             NhomNguoiDung frm = new NhomNguoiDung();
             frm.Show();
         }
 
+        private void thêmNgườiDùngVàoNhómToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void quảnLíNhómNgườiDùngToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+           
+        }
+
         private void phânQuyềnToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            PhanQuyen phanQuyen = new PhanQuyen();
-            phanQuyen.Show();
+            btnThemVaoNhom frm = new btnThemVaoNhom();
+            frm.Show();
+        }
+
+        private void thoátToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Close();
+       
         }
     }
 }

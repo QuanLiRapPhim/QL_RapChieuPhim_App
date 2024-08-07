@@ -103,7 +103,7 @@
             this.nhomNguoiDungDataGridView.Name = "nhomNguoiDungDataGridView";
             this.nhomNguoiDungDataGridView.RowHeadersWidth = 62;
             this.nhomNguoiDungDataGridView.RowTemplate.Height = 28;
-            this.nhomNguoiDungDataGridView.Size = new System.Drawing.Size(465, 357);
+            this.nhomNguoiDungDataGridView.Size = new System.Drawing.Size(389, 357);
             this.nhomNguoiDungDataGridView.TabIndex = 2;
             this.nhomNguoiDungDataGridView.SelectionChanged += new System.EventHandler(this.nhomNguoiDungDataGridView_SelectionChanged);
             // 
@@ -143,11 +143,11 @@
             this.dataGridViewTextBoxColumn3,
             this.dataGridViewCheckBoxColumn1});
             this.pQ_DKDataGridView.DataSource = this.pQ_DKBindingSource;
-            this.pQ_DKDataGridView.Location = new System.Drawing.Point(493, 116);
+            this.pQ_DKDataGridView.Location = new System.Drawing.Point(438, 116);
             this.pQ_DKDataGridView.Name = "pQ_DKDataGridView";
             this.pQ_DKDataGridView.RowHeadersWidth = 62;
             this.pQ_DKDataGridView.RowTemplate.Height = 28;
-            this.pQ_DKDataGridView.Size = new System.Drawing.Size(778, 357);
+            this.pQ_DKDataGridView.Size = new System.Drawing.Size(959, 357);
             this.pQ_DKDataGridView.TabIndex = 3;
             // 
             // dataGridViewTextBoxColumn1
@@ -185,7 +185,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(1068, 480);
+            this.button1.Location = new System.Drawing.Point(1141, 513);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(187, 56);
             this.button1.TabIndex = 4;
@@ -198,11 +198,12 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(206)))), ((int)(((byte)(104)))));
-            this.ClientSize = new System.Drawing.Size(1307, 548);
+            this.ClientSize = new System.Drawing.Size(1409, 625);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.pQ_DKDataGridView);
             this.Controls.Add(this.nhomNguoiDungDataGridView);
             this.Name = "PhanQuyen";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "PhanQuyen";
             this.Load += new System.EventHandler(this.PhanQuyen_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataSetCinema)).EndInit();
