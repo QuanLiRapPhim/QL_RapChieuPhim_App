@@ -179,5 +179,11 @@ namespace Cinema
         {
             this.Close();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            ThongKe thongKe = new ThongKe();
+            thongKe.Show();
+        }
     }
 }
