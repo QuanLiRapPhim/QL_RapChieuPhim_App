@@ -64,9 +64,17 @@ namespace Cinema
 
         private void nhanVienBindingNavigatorSaveItem_Click(object sender, EventArgs e)
         {
-            this.Validate();
-            this.nhanVienBindingSource.EndEdit();
-            this.tableAdapterManager.UpdateAll(this.dataSetCinema);
+            try
+            {
+                this.Validate();
+                this.nhanVienBindingSource.EndEdit();
+                this.tableAdapterManager.UpdateAll(this.dataSetCinema);
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show("Không thể cập nhật!");
+            }
+      
 
         }
 

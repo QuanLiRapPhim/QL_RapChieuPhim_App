@@ -112,6 +112,7 @@
             // 
             this.txtMaVe.Location = new System.Drawing.Point(371, 106);
             this.txtMaVe.Name = "txtMaVe";
+            this.txtMaVe.ReadOnly = true;
             this.txtMaVe.Size = new System.Drawing.Size(317, 26);
             this.txtMaVe.TabIndex = 6;
             // 

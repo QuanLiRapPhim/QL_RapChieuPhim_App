@@ -48,14 +48,14 @@
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.nhomNguoiDungBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
             this.nhomNguoiDungDataGridView = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.maNhomNguoiDungTextBox = new System.Windows.Forms.TextBox();
             this.tenNhomTextBox = new System.Windows.Forms.TextBox();
             this.nhomNguoiDungTableAdapter = new Cinema.DataSetCinemaTableAdapters.NhomNguoiDungTableAdapter();
             this.tableAdapterManager = new Cinema.DataSetCinemaTableAdapters.TableAdapterManager();
             this.nguoiDungNhomNguoiDungBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.nguoiDungNhomNguoiDungTableAdapter = new Cinema.DataSetCinemaTableAdapters.NguoiDungNhomNguoiDungTableAdapter();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             maNhomNguoiDungLabel = new System.Windows.Forms.Label();
             tenNhomLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.nhomNguoiDungBindingNavigator)).BeginInit();
@@ -111,7 +111,7 @@
             this.nhomNguoiDungBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
             this.nhomNguoiDungBindingNavigator.Name = "nhomNguoiDungBindingNavigator";
             this.nhomNguoiDungBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
-            this.nhomNguoiDungBindingNavigator.Size = new System.Drawing.Size(965, 38);
+            this.nhomNguoiDungBindingNavigator.Size = new System.Drawing.Size(965, 33);
             this.nhomNguoiDungBindingNavigator.TabIndex = 0;
             this.nhomNguoiDungBindingNavigator.Text = "bindingNavigator1";
             // 
@@ -121,8 +121,9 @@
             this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
             this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
             this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(34, 33);
+            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(34, 28);
             this.bindingNavigatorAddNewItem.Text = "Add new";
+            this.bindingNavigatorAddNewItem.Click += new System.EventHandler(this.bindingNavigatorAddNewItem_Click);
             // 
             // nhomNguoiDungBindingSource
             // 
@@ -235,11 +236,29 @@
             this.nhomNguoiDungDataGridView.Size = new System.Drawing.Size(628, 245);
             this.nhomNguoiDungDataGridView.TabIndex = 1;
             // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "MaNhomNguoiDung";
+            this.dataGridViewTextBoxColumn1.HeaderText = "Mã nhóm người dùng";
+            this.dataGridViewTextBoxColumn1.MinimumWidth = 8;
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.ReadOnly = true;
+            this.dataGridViewTextBoxColumn1.Width = 150;
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.DataPropertyName = "TenNhom";
+            this.dataGridViewTextBoxColumn2.HeaderText = "Tên nhóm";
+            this.dataGridViewTextBoxColumn2.MinimumWidth = 8;
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.Width = 150;
+            // 
             // maNhomNguoiDungTextBox
             // 
             this.maNhomNguoiDungTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.nhomNguoiDungBindingSource, "MaNhomNguoiDung", true));
             this.maNhomNguoiDungTextBox.Location = new System.Drawing.Point(394, 74);
             this.maNhomNguoiDungTextBox.Name = "maNhomNguoiDungTextBox";
+            this.maNhomNguoiDungTextBox.ReadOnly = true;
             this.maNhomNguoiDungTextBox.Size = new System.Drawing.Size(299, 26);
             this.maNhomNguoiDungTextBox.TabIndex = 3;
             // 
@@ -289,23 +308,6 @@
             // nguoiDungNhomNguoiDungTableAdapter
             // 
             this.nguoiDungNhomNguoiDungTableAdapter.ClearBeforeFill = true;
-            // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.DataPropertyName = "MaNhomNguoiDung";
-            this.dataGridViewTextBoxColumn1.HeaderText = "Mã nhóm người dùng";
-            this.dataGridViewTextBoxColumn1.MinimumWidth = 8;
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.ReadOnly = true;
-            this.dataGridViewTextBoxColumn1.Width = 150;
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            this.dataGridViewTextBoxColumn2.DataPropertyName = "TenNhom";
-            this.dataGridViewTextBoxColumn2.HeaderText = "Tên nhóm";
-            this.dataGridViewTextBoxColumn2.MinimumWidth = 8;
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            this.dataGridViewTextBoxColumn2.Width = 150;
             // 
             // NhomNguoiDung
             // 

@@ -141,13 +141,13 @@
   <metadata name="nguoiDungNhomNguoiDung_DKTableAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 155</value>
   </metadata>
-  <metadata name="fill_DKToolStrip.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>451, 51</value>
-  </metadata>
   <metadata name="nguoiDungNhomNguoiDungBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>451, 155</value>
   </metadata>
   <metadata name="nguoiDungNhomNguoiDungTableAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 201</value>
+  </metadata>
+  <metadata name="fill_DKToolStrip.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>451, 51</value>
   </metadata>
 </root>

@@ -27,7 +27,7 @@ namespace Cinema
             }
             catch(Exception ex)
             {
-                MessageBox.Show("Lỗi không thể sửa!");
+                MessageBox.Show("Lỗi không thể cập nhật!");
                 NhomNguoiDung_Load(sender, e);
             }
             
@@ -40,6 +40,11 @@ namespace Cinema
             this.nguoiDungNhomNguoiDungTableAdapter.Fill(this.dataSetCinema.NguoiDungNhomNguoiDung);
             // TODO: This line of code loads data into the 'dataSetCinema.NhomNguoiDung' table. You can move, or remove it, as needed.
             this.nhomNguoiDungTableAdapter.Fill(this.dataSetCinema.NhomNguoiDung);
+
+        }
+
+        private void bindingNavigatorAddNewItem_Click(object sender, EventArgs e)
+        {
 
         }
     }

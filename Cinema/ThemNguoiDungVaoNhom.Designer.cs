@@ -42,10 +42,6 @@
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nguoiDungNhomNguoiDung_DKBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.nguoiDungNhomNguoiDung_DKTableAdapter = new Cinema.DataSetCinemaTableAdapters.NguoiDungNhomNguoiDung_DKTableAdapter();
-            this.fill_DKToolStrip = new System.Windows.Forms.ToolStrip();
-            this.maNhomNguoiDungToolStripLabel = new System.Windows.Forms.ToolStripLabel();
-            this.maNhomNguoiDungToolStripTextBox = new System.Windows.Forms.ToolStripTextBox();
-            this.fill_DKToolStripButton = new System.Windows.Forms.ToolStripButton();
             this.dgv_NhomNguoiDung = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -53,14 +49,18 @@
             this.btnLoaiKhoiNhom = new System.Windows.Forms.Button();
             this.nguoiDungNhomNguoiDungBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.nguoiDungNhomNguoiDungTableAdapter = new Cinema.DataSetCinemaTableAdapters.NguoiDungNhomNguoiDungTableAdapter();
+            this.maNhomNguoiDungToolStripLabel = new System.Windows.Forms.ToolStripLabel();
+            this.maNhomNguoiDungToolStripTextBox = new System.Windows.Forms.ToolStripTextBox();
+            this.fill_DKToolStripButton = new System.Windows.Forms.ToolStripButton();
+            this.fill_DKToolStrip = new System.Windows.Forms.ToolStrip();
             ((System.ComponentModel.ISupportInitialize)(this.dataSetCinema)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nhomNguoiDungBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nhanVienBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvNhanVien)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nguoiDungNhomNguoiDung_DKBindingSource)).BeginInit();
-            this.fill_DKToolStrip.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_NhomNguoiDung)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nguoiDungNhomNguoiDungBindingSource)).BeginInit();
+            this.fill_DKToolStrip.SuspendLayout();
             this.SuspendLayout();
             // 
             // dataSetCinema
@@ -174,39 +174,6 @@
             // 
             this.nguoiDungNhomNguoiDung_DKTableAdapter.ClearBeforeFill = true;
             // 
-            // fill_DKToolStrip
-            // 
-            this.fill_DKToolStrip.ImageScalingSize = new System.Drawing.Size(24, 24);
-            this.fill_DKToolStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.maNhomNguoiDungToolStripLabel,
-            this.maNhomNguoiDungToolStripTextBox,
-            this.fill_DKToolStripButton});
-            this.fill_DKToolStrip.Location = new System.Drawing.Point(0, 0);
-            this.fill_DKToolStrip.Name = "fill_DKToolStrip";
-            this.fill_DKToolStrip.Size = new System.Drawing.Size(1140, 34);
-            this.fill_DKToolStrip.TabIndex = 2;
-            this.fill_DKToolStrip.Text = "fill_DKToolStrip";
-            // 
-            // maNhomNguoiDungToolStripLabel
-            // 
-            this.maNhomNguoiDungToolStripLabel.Name = "maNhomNguoiDungToolStripLabel";
-            this.maNhomNguoiDungToolStripLabel.Size = new System.Drawing.Size(184, 29);
-            this.maNhomNguoiDungToolStripLabel.Text = "MaNhomNguoiDung:";
-            // 
-            // maNhomNguoiDungToolStripTextBox
-            // 
-            this.maNhomNguoiDungToolStripTextBox.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.maNhomNguoiDungToolStripTextBox.Name = "maNhomNguoiDungToolStripTextBox";
-            this.maNhomNguoiDungToolStripTextBox.Size = new System.Drawing.Size(100, 34);
-            // 
-            // fill_DKToolStripButton
-            // 
-            this.fill_DKToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
-            this.fill_DKToolStripButton.Name = "fill_DKToolStripButton";
-            this.fill_DKToolStripButton.Size = new System.Drawing.Size(67, 29);
-            this.fill_DKToolStripButton.Text = "Fill_DK";
-            this.fill_DKToolStripButton.Click += new System.EventHandler(this.fill_DKToolStripButton_Click);
-            // 
             // dgv_NhomNguoiDung
             // 
             this.dgv_NhomNguoiDung.AutoGenerateColumns = false;
@@ -267,6 +234,39 @@
             // 
             this.nguoiDungNhomNguoiDungTableAdapter.ClearBeforeFill = true;
             // 
+            // maNhomNguoiDungToolStripLabel
+            // 
+            this.maNhomNguoiDungToolStripLabel.Name = "maNhomNguoiDungToolStripLabel";
+            this.maNhomNguoiDungToolStripLabel.Size = new System.Drawing.Size(184, 29);
+            this.maNhomNguoiDungToolStripLabel.Text = "MaNhomNguoiDung:";
+            // 
+            // maNhomNguoiDungToolStripTextBox
+            // 
+            this.maNhomNguoiDungToolStripTextBox.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.maNhomNguoiDungToolStripTextBox.Name = "maNhomNguoiDungToolStripTextBox";
+            this.maNhomNguoiDungToolStripTextBox.Size = new System.Drawing.Size(100, 34);
+            // 
+            // fill_DKToolStripButton
+            // 
+            this.fill_DKToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.fill_DKToolStripButton.Name = "fill_DKToolStripButton";
+            this.fill_DKToolStripButton.Size = new System.Drawing.Size(67, 29);
+            this.fill_DKToolStripButton.Text = "Fill_DK";
+            this.fill_DKToolStripButton.Click += new System.EventHandler(this.fill_DKToolStripButton_Click);
+            // 
+            // fill_DKToolStrip
+            // 
+            this.fill_DKToolStrip.ImageScalingSize = new System.Drawing.Size(24, 24);
+            this.fill_DKToolStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.maNhomNguoiDungToolStripLabel,
+            this.maNhomNguoiDungToolStripTextBox,
+            this.fill_DKToolStripButton});
+            this.fill_DKToolStrip.Location = new System.Drawing.Point(0, 0);
+            this.fill_DKToolStrip.Name = "fill_DKToolStrip";
+            this.fill_DKToolStrip.Size = new System.Drawing.Size(1140, 34);
+            this.fill_DKToolStrip.TabIndex = 2;
+            this.fill_DKToolStrip.Text = "fill_DKToolStrip";
+            // 
             // btnThemVaoNhom
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -288,10 +288,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.nhanVienBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvNhanVien)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nguoiDungNhomNguoiDung_DKBindingSource)).EndInit();
-            this.fill_DKToolStrip.ResumeLayout(false);
-            this.fill_DKToolStrip.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_NhomNguoiDung)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nguoiDungNhomNguoiDungBindingSource)).EndInit();
+            this.fill_DKToolStrip.ResumeLayout(false);
+            this.fill_DKToolStrip.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -309,10 +309,6 @@
         private System.Windows.Forms.DataGridView dgvNhanVien;
         private System.Windows.Forms.BindingSource nguoiDungNhomNguoiDung_DKBindingSource;
         private DataSetCinemaTableAdapters.NguoiDungNhomNguoiDung_DKTableAdapter nguoiDungNhomNguoiDung_DKTableAdapter;
-        private System.Windows.Forms.ToolStrip fill_DKToolStrip;
-        private System.Windows.Forms.ToolStripLabel maNhomNguoiDungToolStripLabel;
-        private System.Windows.Forms.ToolStripTextBox maNhomNguoiDungToolStripTextBox;
-        private System.Windows.Forms.ToolStripButton fill_DKToolStripButton;
         private System.Windows.Forms.DataGridView dgv_NhomNguoiDung;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn9;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn10;
@@ -323,5 +319,9 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
+        private System.Windows.Forms.ToolStripLabel maNhomNguoiDungToolStripLabel;
+        private System.Windows.Forms.ToolStripTextBox maNhomNguoiDungToolStripTextBox;
+        private System.Windows.Forms.ToolStripButton fill_DKToolStripButton;
+        private System.Windows.Forms.ToolStrip fill_DKToolStrip;
     }
 }
